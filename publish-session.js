@@ -22,7 +22,7 @@ const { execSync, spawnSync } = require('child_process');
 const axios = require('axios');
 
 const args = process.argv.slice(2);
-let file = './tmp/session/session.json';
+let file = './tmp/session/creds.json';
 const publicFlag = args.includes('--public');
 const yesFlag = args.includes('--yes') || args.includes('-y');
 let envFile;
