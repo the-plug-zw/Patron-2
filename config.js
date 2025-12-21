@@ -8,14 +8,14 @@ global.prefix = (process.env.PREFIX || ".").trim().split(/\s+/);
 // your desired prefix symbol only
 global.owner = process.env.OWNER_NUMBER || "263781564004"; // owner number , for multiple number
 global.sudo = process.env.SUDO  || "";
-global.ownername = process.env.OWNER_NAME || "Patron TechX"; //set bot owner name here 
-global.botname = process.env.BOT_NAME || "ᴘᴀᴛʀᴏɴ-ᴍᴅ"
-global.author = process.env.AUTHOR  || "Patron TechX";
-global.packname = process.env.PACK_NAME  || "© ᴘᴀᴛʀᴏɴ ᴍᴅ ²⁵";
+global.ownername = process.env.OWNER_NAME || "🎩-Hxcker-263-🎩"; //set bot owner name here 
+global.botname = process.env.BOT_NAME || "🎩-Zed-Bot-🎩"
+global.author = process.env.AUTHOR  || "Hxcker-263";
+global.packname = process.env.PACK_NAME  || "🎩-Hxcker-263-🎩";
 global.session = process.env.SESSION_ID || ""
 // Backwards-compatible: `main.js` expects `global.sessionId`
 global.sessionId = process.env.SESSION_ID || process.env.SESSION || global.session || ""
-global.timezone = process.env.TIME_ZONE || "Africa/Lagos";
+global.timezone = process.env.TIME_ZONE || "Africa/Johannesburg";
 global.simbol = process.env.SYMBOL || '🚹';
 global.thumb = process.env.THUMB || "https://files.catbox.moe/e71nan.png"
 global.footer = process.env.FOOTER || '';

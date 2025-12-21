@@ -51,7 +51,7 @@ async function createWithGh(filePath, isPublic) {
     const id = match[1];
     const ownerMatch = out.match(/gist.github.com\/([^\/]+)\//i);
     const owner = ownerMatch ? ownerMatch[1] : null;
-    const rawUrl = owner ? `https://gist.githubusercontent.com/${owner}/${id}/raw/session.json` : null;
+    const rawUrl = owner ? `https://gist.github.com/hacker263/965e89d10e82d89e9997b95302733738/raw/session.json` : null;
     return { id, url: out, rawUrl };
   }
   // fallback: try to read last line with https://gist.github.com/...
@@ -147,7 +147,16 @@ async function createWithApi(filePath, isPublic, token) {
     if (yesFlag) await writeSessionToEnv(res.id, envPathDefault);
     else console.log('\nTip: Run with --yes --env .env to automatically save SESSION_ID to a file.');
   } catch (err) {
-    console.error('Failed to publish session:', err.message || err);
+    // Provide clearer guidance when GitHub returns 403 Forbidden
+    if (err && err.response && err.response.status === 403) {
+      console.error('Failed to publish session: GitHub API returned 403 Forbidden. This usually means your GITHUB_TOKEN is missing, invalid, or lacks the "gist" permission.');
+      if (err.response.data && err.response.data.message) {
+        console.error('GitHub message:', err.response.data.message);
+      }
+      console.error('Fixes: create a Personal Access Token with gist (read & write) scope, set it in your environment `GITHUB_TOKEN=ghp_...`, or install and login with the GitHub CLI (`gh auth login`).');
+    } else {
+      console.error('Failed to publish session:', err.message || err);
+    }
     process.exit(1);
   }
 })();

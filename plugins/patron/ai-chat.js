@@ -47,7 +47,7 @@ module.exports = [
                     return reply('❌ Meta LLaMA AI couldn\'t generate a response.');
                 }
                 
-                await reply(`🦙 *Meta LLaMA says:*\n\n${result.message.trim()}\n\n— *Patron TechX*`);
+                await reply(`🦙 *Meta LLaMA says:*\n\n${result.message.trim()}\n\n— *🎩-Hxcker-263-🎩*`);
             } catch (error) {
                 console.log('Meta LLaMA Error:', error);
                 reply('❌ An error occurred while contacting Meta LLaMA AI.');
