@@ -51,8 +51,6 @@ const BodyForm = require('form-data');
 const FormData = require('form-data');
 const { randomBytes } = require('crypto');
 const uploadImage = require('./lib/upload');
-const api = require('./lib/api');
-const { igdl } = require('./lib/downloader');
 const { tiktokDl } = require('btch-downloader');
 const fetch = require('node-fetch');
 const os = require('os');
@@ -61,11 +59,12 @@ const fs = require('fs');
 const path = require('path');
 const moment = require('moment-timezone');
 const { cekArrSave } = require('./lib/arrfunction.js');
-const { LoadDataBase } = require('./lib/database');
+const DataBase = require('./lib/database');
 
 module.exports = ednut = async (conn, msg, store, m, chatUpdate) => {
     try {
-        await LoadDataBase(conn, msg);
+        const db = new DataBase();
+        await db.read();
         if (!msg) return;
 
         const { type, quotedMsg } = msg;
@@ -75,14 +74,14 @@ module.exports = ednut = async (conn, msg, store, m, chatUpdate) => {
         const body = msg.isGroup ?
             (msg.mtype === 'conversation' ? msg.message.conversation :
                 msg.mtype === 'imageMessage' ? msg.message.imageMessage.caption :
-                msg.mtype === 'videoMessage' ? msg.message.videoMessage.caption :
-                msg.mtype === 'extendedTextMessage' ? msg.message.extendedTextMessage.text :
-                msg.mtype === 'buttonsResponseMessage' ? msg.message.buttonsResponseMessage.selectedButtonId :
-                msg.mtype === 'listResponseMessage' ? msg.message.listResponseMessage.singleSelectReply.selectedRowId :
-                msg.mtype === 'templateButtonReplyMessage' ? msg.message.templateButtonReplyMessage.selectedId :
-                msg.mtype === 'messageContextInfo' ? msg.message.messageContextInfo.stanzaId :
-                msg.mtype === 'buttonsResponseMessage' ? msg.message.buttonsResponseMessage.selectedButtonId :
-                '') :
+                    msg.mtype === 'videoMessage' ? msg.message.videoMessage.caption :
+                        msg.mtype === 'extendedTextMessage' ? msg.message.extendedTextMessage.text :
+                            msg.mtype === 'buttonsResponseMessage' ? msg.message.buttonsResponseMessage.selectedButtonId :
+                                msg.mtype === 'listResponseMessage' ? msg.message.listResponseMessage.singleSelectReply.selectedRowId :
+                                    msg.mtype === 'templateButtonReplyMessage' ? msg.message.templateButtonReplyMessage.selectedId :
+                                        msg.mtype === 'messageContextInfo' ? msg.message.messageContextInfo.stanzaId :
+                                            msg.mtype === 'buttonsResponseMessage' ? msg.message.buttonsResponseMessage.selectedButtonId :
+                                                '') :
             msg.message.conversation || msg.message.extendedTextMessage?.text || msg.message.imageMessage?.caption || msg.message.videoMessage?.caption || msg.message.extendedTextMessage?.text || msg.message.buttonsResponseMessage?.selectedButtonId || msg.message.listResponseMessage?.singleSelectReply?.selectedRowId || msg.message.templateButtonReplyMessage?.selectedId || msg.text || '';
 
         const commandBody = typeof msg.text === 'string' ? msg.text : '';
@@ -123,18 +122,18 @@ module.exports = ednut = async (conn, msg, store, m, chatUpdate) => {
 
         const isImage = msg.mtype === 'imageMessage' && msg.message.imageMessage.caption ? msg.message.imageMessage.caption :
             msg.mtype === 'conversation' && msg.message.conversation ? msg.message.conversation :
-            msg.mtype === 'extendedTextMessage' && msg.message.extendedTextMessage.text ? msg.message.extendedTextMessage.text :
-            msg.mtype === 'videoMessage' && msg.message.videoMessage.caption ? msg.message.videoMessage.caption :
-            msg.mtype === 'buttonsResponseMessage' && msg.message.buttonsResponseMessage.selectedButtonId ? msg.message.buttonsResponseMessage.selectedButtonId :
-            msg.mtype === 'listResponseMessage' && msg.message.listResponseMessage.singleSelectReply.selectedRowId ? msg.message.listResponseMessage.singleSelectReply.selectedRowId :
-            msg.mtype === 'templateButtonReplyMessage' && msg.message.templateButtonReplyMessage.selectedId ? msg.message.templateButtonReplyMessage.selectedId :
-            '';
+                msg.mtype === 'extendedTextMessage' && msg.message.extendedTextMessage.text ? msg.message.extendedTextMessage.text :
+                    msg.mtype === 'videoMessage' && msg.message.videoMessage.caption ? msg.message.videoMessage.caption :
+                        msg.mtype === 'buttonsResponseMessage' && msg.message.buttonsResponseMessage.selectedButtonId ? msg.message.buttonsResponseMessage.selectedButtonId :
+                            msg.mtype === 'listResponseMessage' && msg.message.listResponseMessage.singleSelectReply.selectedRowId ? msg.message.listResponseMessage.singleSelectReply.selectedRowId :
+                                msg.mtype === 'templateButtonReplyMessage' && msg.message.templateButtonReplyMessage.selectedId ? msg.message.templateButtonReplyMessage.selectedId :
+                                    '';
 
         const isText = msg.mtype === 'conversation' && msg.message.conversation ? msg.message.conversation :
             msg.mtype === 'imageMessage' && msg.message.imageMessage.caption ? msg.message.imageMessage.caption :
-            msg.mtype === 'videoMessage' && msg.message.videoMessage.caption ? msg.message.videoMessage.caption :
-            msg.mtype === 'extendedTextMessage' && msg.message.extendedTextMessage.text ? msg.message.extendedTextMessage.text :
-            '';
+                msg.mtype === 'videoMessage' && msg.message.videoMessage.caption ? msg.message.videoMessage.caption :
+                    msg.mtype === 'extendedTextMessage' && msg.message.extendedTextMessage.text ? msg.message.extendedTextMessage.text :
+                        '';
 
         const trimBody = isText.slice(0).trim().toLowerCase();
         const prefixCommand = trimBody.split(/\s+/).shift()?.toLowerCase() || '';
@@ -605,11 +604,8 @@ module.exports = ednut = async (conn, msg, store, m, chatUpdate) => {
                     prefix: prefix,
                     getQuote: getRandomQuote,
                     uploadImage: uploadImage,
-                    LoadDataBase: LoadDataBase,
                     openai: openaiChat,
                     tiktokDl: tiktokDl,
-                    igdl: igdl,
-                    api: api,
                     yts: yts,
                     from: from,
                     pinterest: pinterestSearch,
