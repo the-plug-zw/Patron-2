@@ -12,9 +12,9 @@ global.ownername = process.env.OWNER_NAME || "🎩-Hxcker-263-🎩"; //set bot o
 global.botname = process.env.BOT_NAME || "🎩-Zed-Bot-🎩"
 global.author = process.env.AUTHOR  || "Hxcker-263";
 global.packname = process.env.PACK_NAME  || "🎩-Hxcker-263-🎩";
-global.session = process.env.SESSION_ID || ""
+global.session = process.env.SESSION_ID || "Zed-Bot~965e89d10e82d89e9997b95302733738"
 // Backwards-compatible: `main.js` expects `global.sessionId`
-global.sessionId = process.env.SESSION_ID || process.env.SESSION || global.session || ""
+global.sessionId = process.env.SESSION_ID || process.env.SESSION || global.session || "Zed-Bot~965e89d10e82d89e9997b95302733738"
 global.timezone = process.env.TIME_ZONE || "Africa/Johannesburg";
 global.simbol = process.env.SYMBOL || '🚹';
 global.thumb = process.env.THUMB || "https://files.catbox.moe/e71nan.png"
