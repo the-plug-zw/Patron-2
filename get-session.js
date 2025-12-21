@@ -16,6 +16,7 @@
 const fs = require('fs');
 const path = require('path');
 const { default: makeWASocket, useMultiFileAuthState } = require('@whiskeysockets/baileys');
+const util = require('util');
 
 const args = process.argv.slice(2);
 const FLAG_PRINT = args.includes('--print');
@@ -27,22 +28,110 @@ async function start() {
 
   const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
 
-  const conn = makeWASocket({
-    auth: state,
-    printQRInTerminal: true,
-    browser: ['Patron-Session-Generator', 'Chrome', '100.0']
-  });
+  // connection logic with retry/backoff to handle stream errors and allow pairing to complete
+  let conn = null;
+  let connected = false;
 
-  conn.ev.on('creds.update', saveCreds);
+  async function attemptConnect(maxRetries = 8) {
+    let attempt = 0;
+    while (attempt < maxRetries) {
+      attempt++;
+      console.log(`\n--- Connection attempt ${attempt}/${maxRetries} ---`);
 
-  conn.ev.on('connection.update', update => {
-    console.log('Connection update:', update);
-    if (update.connection === 'close') {
-      console.log('Connection closed. If creds.json exists the session is saved at:', path.join(sessionDir, 'creds.json'));
-      process.exit(0);
+      conn = makeWASocket({
+        auth: state,
+        printQRInTerminal: true,
+        browser: ['Patron-Session-Generator', 'Chrome', '100.0']
+      });
+
+      conn.ev.on('creds.update', saveCreds);
+
+      // wait for either open or close
+      const evResult = await new Promise(resolve => {
+        const onUpdate = update => {
+          console.log('Connection update:', update);
+          if (update.qr) console.log('QR updated — scan it now.');
+          if (update.connection === 'open') {
+            conn.ev.off('connection.update', onUpdate);
+            resolve({ type: 'open', update });
+          }
+          if (update.connection === 'close') {
+            conn.ev.off('connection.update', onUpdate);
+            resolve({ type: 'close', update });
+          }
+        };
+
+        conn.ev.on('connection.update', onUpdate);
+
+        // safety timeout in case no events occur
+        setTimeout(() => resolve({ type: 'timeout' }), 120000);
+      });
+
+      if (evResult.type === 'open') {
+        connected = true;
+        console.log('\n✅ Connection opened — device should be paired now.');
+        console.log('Credentials will be saved to:', path.join(sessionDir, 'creds.json'));
+        return conn;
+      }
+
+      // handle close / timeout
+      if (evResult.type === 'timeout') {
+        console.log('No connection events within timeout (120s). Will retry.');
+      } else if (evResult.type === 'close') {
+        const update = evResult.update;
+        console.log('\n⚠️ Connection closed. Capturing verbose lastDisconnect details for debugging:');
+        try {
+          console.log(util.inspect(update.lastDisconnect, { depth: null }));
+        } catch (err) {
+          console.log('Error inspecting lastDisconnect:', err.message);
+        }
+
+        try {
+          const debugPath = path.join(sessionDir, 'session-debug.log');
+          const entry = `----- ${new Date().toISOString()} -----\n` + util.inspect(update, { depth: null }) + '\n\n';
+          fs.appendFileSync(debugPath, entry, 'utf8');
+          console.log('Wrote debug details to', debugPath);
+        } catch (err) {
+          console.error('Failed to write debug log:', err.message || err);
+        }
+
+        const statusCode = update.lastDisconnect && update.lastDisconnect.output && update.lastDisconnect.output.statusCode;
+        const errMsg = (update.lastDisconnect && (update.lastDisconnect.error && update.lastDisconnect.error.message)) || (update.lastDisconnect && update.lastDisconnect.output && update.lastDisconnect.output.payload && update.lastDisconnect.output.payload.message) || '';
+
+        if (statusCode === 515 || errMsg.includes('Stream Errored')) {
+          // recommended restart: wait and retry (exponential backoff)
+          const backoff = Math.min(5 * 1000 * attempt, 60 * 1000); // 5s * attempt up to 60s
+          console.log(`Stream Errored / restart required. Waiting ${backoff / 1000}s then retrying...`);
+          await new Promise(r => setTimeout(r, backoff));
+          continue; // next attempt
+        } else {
+          console.log('Non-restartable disconnect or pairing failed. Will not retry automatically.');
+          break;
+        }
+      }
+
+      // cleanup before next attempt
+      try {
+        conn.ev.removeAllListeners();
+        conn.end && conn.end();
+      } catch (e) {}
+
+      // small delay before next attempt
+      await new Promise(r => setTimeout(r, 2000));
     }
-  });
 
+    return null;
+  }
+
+  // start attempts
+  console.log('Scan the QR with your WhatsApp (it should appear above).');
+  const activeConn = await attemptConnect(8);
+  if (!activeConn) {
+    console.error('Failed to establish a stable connection after multiple attempts. Check network, run locally (not in Codespaces) and ensure phone has internet and try again.');
+    process.exit(1);
+  }
+
+  // On successful connection, export creds/session.json and print messages
   conn.ev.on('open', async () => {
     console.log('\n✅ Authenticated. Credentials saved to:', path.join(sessionDir, 'creds.json'));
 
@@ -67,8 +156,6 @@ async function start() {
 
     console.log('You may now close this script (Ctrl+C) once you have the creds saved.');
   });
-
-  console.log('Scan the QR with your WhatsApp (it should appear above).');
 }
 
 start().catch(err => {
