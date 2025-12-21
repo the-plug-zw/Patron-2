@@ -1,0 +1,36 @@
+----- 2025-12-21T16:19:51.141Z -----
+{
+  connection: 'close',
+  lastDisconnect: {
+    error: Error: Stream Errored (restart required)
+        at WebSocketClient.<anonymous> (/workspaces/Patron/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:559:13)
+        at WebSocketClient.emit (node:events:508:28)
+        at /workspaces/Patron/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:259:35
+        at Object.decodeFrame (/workspaces/Patron/node_modules/@whiskeysockets/baileys/lib/Utils/noise-handler.js:149:17)
+        at WebSocketClient.onMessageReceived (/workspaces/Patron/node_modules/@whiskeysockets/baileys/lib/Socket/socket.js:235:15)
+        at WebSocketClient.emit (node:events:508:28)
+        at WebSocket.<anonymous> (/workspaces/Patron/node_modules/@whiskeysockets/baileys/lib/Socket/Client/web-socket-client.js:46:100)
+        at WebSocket.emit (node:events:508:28)
+        at Receiver.receiverOnMessage (/workspaces/Patron/node_modules/ws/lib/websocket.js:1220:20)
+        at Receiver.emit (node:events:508:28) {
+      data: {
+        tag: 'stream:error',
+        attrs: { code: '515' },
+        content: undefined
+      },
+      isBoom: true,
+      isServer: true,
+      output: {
+        statusCode: 515,
+        payload: {
+          statusCode: 515,
+          error: 'Unknown',
+          message: 'Stream Errored (restart required)'
+        },
+        headers: {}
+      }
+    },
+    date: 2025-12-21T16:19:51.140Z
+  }
+}
+
