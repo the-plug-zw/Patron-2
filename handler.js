@@ -72,17 +72,17 @@ module.exports = ednut = async (conn, msg, store, m, chatUpdate) => {
         const mime = (quoted.msg || quoted).mimetype || '';
         const isMedia = /image|video|sticker|audio/.test(mime);
         const body = msg.isGroup ?
-            (msg.mtype === 'conversation' ? msg.message.conversation :
-                msg.mtype === 'imageMessage' ? msg.message.imageMessage.caption :
-                    msg.mtype === 'videoMessage' ? msg.message.videoMessage.caption :
-                        msg.mtype === 'extendedTextMessage' ? msg.message.extendedTextMessage.text :
-                            msg.mtype === 'buttonsResponseMessage' ? msg.message.buttonsResponseMessage.selectedButtonId :
-                                msg.mtype === 'listResponseMessage' ? msg.message.listResponseMessage.singleSelectReply.selectedRowId :
-                                    msg.mtype === 'templateButtonReplyMessage' ? msg.message.templateButtonReplyMessage.selectedId :
-                                        msg.mtype === 'messageContextInfo' ? msg.message.messageContextInfo.stanzaId :
-                                            msg.mtype === 'buttonsResponseMessage' ? msg.message.buttonsResponseMessage.selectedButtonId :
+            (msg.mtype === 'conversation' ? msg.message?.conversation :
+                msg.mtype === 'imageMessage' ? msg.message?.imageMessage?.caption :
+                    msg.mtype === 'videoMessage' ? msg.message?.videoMessage?.caption :
+                        msg.mtype === 'extendedTextMessage' ? msg.message?.extendedTextMessage?.text :
+                            msg.mtype === 'buttonsResponseMessage' ? msg.message?.buttonsResponseMessage?.selectedButtonId :
+                                msg.mtype === 'listResponseMessage' ? msg.message?.listResponseMessage?.singleSelectReply?.selectedRowId :
+                                    msg.mtype === 'templateButtonReplyMessage' ? msg.message?.templateButtonReplyMessage?.selectedId :
+                                        msg.mtype === 'messageContextInfo' ? msg.message?.messageContextInfo?.stanzaId :
+                                            msg.mtype === 'buttonsResponseMessage' ? msg.message?.buttonsResponseMessage?.selectedButtonId :
                                                 '') :
-            msg.message.conversation || msg.message.extendedTextMessage?.text || msg.message.imageMessage?.caption || msg.message.videoMessage?.caption || msg.message.extendedTextMessage?.text || msg.message.buttonsResponseMessage?.selectedButtonId || msg.message.listResponseMessage?.singleSelectReply?.selectedRowId || msg.message.templateButtonReplyMessage?.selectedId || msg.text || '';
+            msg.message?.conversation || msg.message?.extendedTextMessage?.text || msg.message?.imageMessage?.caption || msg.message?.videoMessage?.caption || msg.message?.extendedTextMessage?.text || msg.message?.buttonsResponseMessage?.selectedButtonId || msg.message?.listResponseMessage?.singleSelectReply?.selectedRowId || msg.message?.templateButtonReplyMessage?.selectedId || msg.text || '';
 
         const commandBody = typeof msg.text === 'string' ? msg.text : '';
         const prefix = Array.isArray(global.prefix) ? global.prefix : [global.prefix];
@@ -221,23 +221,55 @@ module.exports = ednut = async (conn, msg, store, m, chatUpdate) => {
         }
 
         async function replyToSender(name, text) {
-            return conn.sendMessage(msg.chat, {
-                text: text,
-                contextInfo: {
-                    mentionedJid: [sender],
-                    externalAdReply: {
-                        showAdAttribution: true,
-                        thumbnailUrl: profilePicture,
-                        title: global.botname,
-                        body: runtime(process.uptime()),
-                        previewType: 'PHOTO'
+            // Handle being called with just one argument (text passed as name)
+            if (typeof name === 'string' && text === undefined) {
+                text = name;
+                name = undefined;
+            }
+
+            if (!text || typeof text !== 'string') {
+                console.warn('[WARN] replyToSender received invalid text:', typeof text, text);
+                return;
+            }
+            try {
+                // Sanitize text to prevent Baileys errors
+                const sanitizedText = String(text).trim();
+                if (!sanitizedText) return;
+
+                return conn.sendMessage(msg.chat, {
+                    text: sanitizedText,
+                    contextInfo: {
+                        mentionedJid: [sender],
+                        externalAdReply: {
+                            showAdAttribution: true,
+                            thumbnailUrl: profilePicture,
+                            title: global.botname,
+                            body: runtime(process.uptime()),
+                            previewType: 'PHOTO'
+                        }
                     }
-                }
-            }, { quoted: msg });
+                }, { quoted: msg });
+            } catch (err) {
+                console.error('[REPLY ERROR]', err?.message || err);
+                return;
+            }
         }
 
         const reply = async text => {
-            await conn.sendMessage(msg.chat, { text: styletext(text) }, { quoted: msg });
+            try {
+                const styledResults = await styletext(text);
+                let styledText = text; // fallback to original text
+                if (Array.isArray(styledResults) && styledResults.length > 0) {
+                    // Use the first style result
+                    styledText = styledResults[0].result || text;
+                }
+                if (typeof styledText !== 'string') styledText = String(styledText);
+                await conn.sendMessage(msg.chat, { text: styledText }, { quoted: msg });
+            } catch (err) {
+                console.error('[REPLY ERROR]', err?.message || err);
+                // Fallback: send plain text if styling fails
+                await conn.sendMessage(msg.chat, { text: text }, { quoted: msg }).catch(() => { });
+            }
         };
 
         const botname = global.botname || 'Developer Bot';
@@ -432,21 +464,21 @@ module.exports = ednut = async (conn, msg, store, m, chatUpdate) => {
             }
         }
 
-        const fullBody = msg.message.conversation ||
-            msg.message.extendedTextMessage?.text ||
-            msg.message.imageMessage?.caption ||
-            msg.message.imageMessage?.url ||
-            msg.message.videoMessage?.caption ||
-            msg.message.videoMessage?.url ||
-            msg.message.stickerMessage?.url ||
-            msg.message.documentMessage?.caption ||
-            msg.message.documentMessage?.url ||
-            msg.message.audioMessage?.url ||
-            msg.message.buttonsResponseMessage?.selectedButtonId ||
-            msg.message.templateButtonReplyMessage?.selectedId ||
-            msg.message.listResponseMessage?.singleSelectReply?.selectedRowId ||
-            msg.message.locationMessage?.degreesLatitude ||
-            msg.message.liveLocationMessage?.sequenceNumber ||
+        const fullBody = msg.message?.conversation ||
+            msg.message?.extendedTextMessage?.text ||
+            msg.message?.imageMessage?.caption ||
+            msg.message?.imageMessage?.url ||
+            msg.message?.videoMessage?.caption ||
+            msg.message?.videoMessage?.url ||
+            msg.message?.stickerMessage?.url ||
+            msg.message?.documentMessage?.caption ||
+            msg.message?.documentMessage?.url ||
+            msg.message?.audioMessage?.url ||
+            msg.message?.buttonsResponseMessage?.selectedButtonId ||
+            msg.message?.templateButtonReplyMessage?.selectedId ||
+            msg.message?.listResponseMessage?.singleSelectReply?.selectedRowId ||
+            msg.message?.locationMessage?.degreesLatitude ||
+            msg.message?.liveLocationMessage?.sequenceNumber ||
             '';
 
         if (!msg.isGroup && !msg.key.fromMe && fullBody) {

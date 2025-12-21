@@ -12,16 +12,16 @@
   <a href="https://github.com/hacker263/followers">
     <img title="Followers" src="https://img.shields.io/github/followers/hacker263?color=EB5406&style=for-the-badge&logo=github&logoColor=white">
   </a>
-  <a href="https://github.com/hacker263/Zed-Bot3/stargazers/">
+  <a href="https://github.com/hacker263/patron/stargazers/">
     <img title="Stars" src="https://img.shields.io/github/stars/hacker263/Zed-Bot3?color=FFCE44&style=for-the-badge&logo=reverbnation&logoColor=white">
   </a>
-  <a href="https://github.com/hacker263/Zed-Bot3/network/members">
+  <a href="https://github.com/hacker263/patron/network/members">
     <img title="Forks" src="https://img.shields.io/github/forks/hacker263/Zed-Bot3?color=FF007F&style=for-the-badge&logo=git&logoColor=white">
   </a>
-  <a href="https://github.com/hacker263/Zed-Bot3/">
+  <a href="https://github.com/hacker263/patron/">
     <img title="Repo Size" src="https://img.shields.io/github/repo-size/hacker263/Zed-Bot3?style=for-the-badge&color=FFFF33&logo=docusign&logoColor=white">
   </a>
-  <a href="https://github.com/hacker263/Zed-Bot3/graphs/commit-activity">
+  <a href="https://github.com/hacker263/patron/graphs/commit-activity">
     <img height="28" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge&logo=gitpod&logoColor=white">
   </a>
 </div>
@@ -52,7 +52,7 @@
 
 ### ✅ First: Star and Fork the Repo
 
-<a href='https://github.com/hacker263/Zed-Bot3/fork' target="_blank">
+<a href='https://github.com/hacker263/patron/fork' target="_blank">
   <img src='https://img.shields.io/badge/FORK_REPOSITORY-008000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000'/>
 </a>
 
@@ -111,7 +111,7 @@ Automated write: you can run `npm run publish-session:apply` which creates the g
 ```bash
 apt update && apt upgrade
 pkg install nodejs git
-git clone https://github.com/hacker263/Zed-Bot3
+git clone https://github.com/hacker263/patron
 cd Zed-Bot3
 npm install
 npm start

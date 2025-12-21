@@ -1,4 +1,10 @@
 // downloader-pin.js - Pinterest downloader functionality
+
+// Ensure global.log exists (fallback if not defined globally)
+if (typeof global.log !== 'function') {
+  global.log = (level, msg) => console.log(`[${level}]`, msg);
+}
+
 module.exports = [
   {
     command: ['img'],
@@ -20,25 +26,25 @@ module.exports = [
 
         let [query, countStr] = text.split(' ');
         let limit = 3; // Default limit
-        
+
         if (text.includes(' ')) {
           const lastWord = text.trim().split(' ').pop();
-          !isNaN(lastWord) 
+          !isNaN(lastWord)
             ? (limit = parseInt(lastWord), query = text.trim().split(' ').slice(0, -1).join(' '))
             : query = text;
         }
 
         const results = await pinterest(query);
-        
+
         if (!results.length) {
           return reply('No results found for *' + query + '*.');
         }
 
         const maxResults = Math.min(results.length, limit);
-        
+
         for (let i = 0; i < maxResults; i++) {
           const image = results[i];
-          
+
           await ednut.sendMessage(message.chat, {
             'image': {
               'url': image.url
@@ -47,10 +53,10 @@ module.exports = [
           }, {
             'quoted': message
           });
-          
+
           await new Promise(resolve => setTimeout(resolve, 500));
         }
-        
+
       } catch (error) {
         global.log('ERROR', 'img command failed: ' + (error.message || error));
         reply('An error occurred while fetching Pinterest images.');
@@ -77,14 +83,14 @@ module.exports = [
         }
 
         const mediaData = await pinDL(text);
-        
+
         if (!mediaData?.data?.length) {
           return reply('No media found for this link.');
         }
 
         for (let media of mediaData.data) {
           const mediaType = lookup(media.url);
-          
+
           await ednut.sendMessage(message.chat, {
             [mediaType.split('/')[0]]: {
               'url': media.url
@@ -94,7 +100,7 @@ module.exports = [
             'quoted': message
           });
         }
-        
+
       } catch (error) {
         global.log('ERROR', 'pindl command failed: ' + (error.message || error));
         reply('Failed to download from Pinterest.');

@@ -6,7 +6,7 @@ app.get('/', (req, res) => res.send('Bot is running!'));
 
 app.listen(port);
 
-process.on('uncaughtException', function(err) {
+process.on('uncaughtException', function (err) {
     const errorStr = String(err || '');
     const ignoreList = [
         'Error: read ECONNRESET',
@@ -91,7 +91,7 @@ require('./config.js');
 require('./lib/update');
 
 const chalk = require('chalk');
-global.log = function(type, text) {
+global.log = function (type, text) {
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
@@ -99,8 +99,8 @@ global.log = function(type, text) {
     const time = `${hours}:${minutes}:${seconds}`;
     const logType = type.toUpperCase();
     const coloredType = logType === 'INFO' ? chalk.cyan(logType) :
-                        logType === 'WARN' ? chalk.yellow(logType) :
-                        logType === 'ERROR' ? chalk.red(logType) : logType;
+        logType === 'WARN' ? chalk.yellow(logType) :
+            logType === 'ERROR' ? chalk.red(logType) : logType;
     console.log(coloredType + ' [' + time + ']:', chalk.white(text));
 };
 
@@ -160,7 +160,7 @@ global.opts = new Object(yargs(process.argv.slice(2)).help(false).parse());
 const groupCache = new NodeCache({ stdTTL: 3600 });
 const pkg = require('./package.json');
 
-const deleteFolderRecursive = function(folderPath) {
+const deleteFolderRecursive = function (folderPath) {
     if (fs.existsSync(folderPath)) {
         fs.readdirSync(folderPath).forEach(file => {
             const curPath = path.join(folderPath, file);
@@ -216,7 +216,10 @@ async function startBotz() {
     require('./all/connect/antistatus')(conn);
     require('./all/connect/antidelete')(conn, store);
     require('./all/connect/call')(conn, store);
-    require('./all/connect/connection')(conn, store);
+    require('./all/connect/connection')(conn, () => {
+        log('WARN', 'Restart triggered');
+        process.exit(0);
+    });
 
     setInterval(async () => {
         try {
@@ -235,7 +238,7 @@ async function startBotz() {
                 if (file.endsWith('.json') && file.startsWith('creds')) {
                     try {
                         fs.unlinkSync(path.join(sessionPath, file));
-                    } catch {}
+                    } catch { }
                 }
             }
         }
@@ -249,7 +252,7 @@ async function startBotz() {
                     stat.isDirectory() ?
                         fs.rmSync(fullPath, { recursive: true, force: true }) :
                         fs.unlinkSync(fullPath);
-                } catch {}
+                } catch { }
             }
         }
         global.gc && global.gc();
@@ -317,8 +320,8 @@ async function startBotz() {
     conn.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path :
             /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') :
-            /^https?:\/\//.test(path) ? await await getBuffer(path) :
-            fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0);
+                /^https?:\/\//.test(path) ? await await getBuffer(path) :
+                    fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0);
         let buffer;
         if (options && (options.packname || options.author)) {
             buffer = await writeExifImg(buff, options);
@@ -335,8 +338,8 @@ async function startBotz() {
     conn.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path :
             /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') :
-            /^https?:\/\//.test(path) ? await getBuffer(path) :
-            fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0);
+                /^https?:\/\//.test(path) ? await getBuffer(path) :
+                    fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0);
         let buffer;
         if (options && (options.packname || options.author)) {
             buffer = await writeExifVid(buff, options);
@@ -412,9 +415,9 @@ async function startBotz() {
     conn.getFile = async (path, saveToFile = false) => {
         let res, buffer = Buffer.isBuffer(path) ? path :
             /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split(',')[1], 'base64') :
-            /^https?:\/\//.test(path) ? await (res = await getBuffer(path)) :
-            fs.existsSync(path) ? fs.readFileSync(path) :
-            typeof path === 'string' ? path : Buffer.alloc(0);
+                /^https?:\/\//.test(path) ? await (res = await getBuffer(path)) :
+                    fs.existsSync(path) ? fs.readFileSync(path) :
+                        typeof path === 'string' ? path : Buffer.alloc(0);
         const fileInfo = await FileType.fromBuffer(buffer) || { mime: 'application/octet-stream', ext: 'bin' };
         const fileName = path.join(__dirname, './tmp/' + new Date().getTime() + '.' + fileInfo.ext);
         if (buffer && saveToFile) fs.promises.writeFile(fileName, buffer);

@@ -50,12 +50,12 @@ module.exports = function handleConnectionUpdate(client, restartFunction) {
         // Handle "connecting" state
         if (connection === 'connecting') {
             const reconnectCount = global.db.reconnect || 0;
-            const logMessage = reconnectCount === 0 
+            const logMessage = reconnectCount === 0
                 ? '[0] Connecting to WhatsApp...'
                 : `[!] Reconnecting (${reconnectCount}/${process.env.MAX_RESTART})...`;
-            
+
             console.log(reconnectCount === 0 ? 'INFO' : 'WARN', logMessage);
-            
+
             if (reconnectCount === 0) {
                 console.log('INFO', `[0] Patron Version: v${pkg.version}`);
             }
@@ -65,7 +65,7 @@ module.exports = function handleConnectionUpdate(client, restartFunction) {
         if (connection === 'open') {
             const userId = client.user.id.split(':')[0];
             console.log('INFO', `[0] Connected to: ${userId}`);
-            
+
             // Reset reconnect counter
             global.db.reconnect = 0;
 
@@ -73,11 +73,11 @@ module.exports = function handleConnectionUpdate(client, restartFunction) {
             if (!global.db.loadedPlugins) {
                 try {
                     console.log('INFO', '[0] Installing plugins...');
-                    
+
                     // Load all .js files from plugins directory
                     const pluginFiles = fs.readdirSync('./plugins/patron')
                         .filter(file => file.endsWith('.js'));
-                    
+
                     for (const file of pluginFiles) {
                         try {
                             require(`../../plugins/patron/${file}`);
@@ -85,7 +85,7 @@ module.exports = function handleConnectionUpdate(client, restartFunction) {
                             console.error('ERROR', `[x] Failed to load plugin ${file}: ${error.message}`);
                         }
                     }
-                    
+
                     console.log('INFO', '[0] Plugins installed.');
                     global.db.loadedPlugins = true;
                 } catch (error) {
@@ -96,8 +96,8 @@ module.exports = function handleConnectionUpdate(client, restartFunction) {
             // Send connection announcement if enabled and not already sent
             if (process.env.START_MSG === 'true' && !announceData.announced) {
                 const latestVersion = await getLatestGitHubVersion();
-                const versionStatus = latestVersion 
-                    ? (latestVersion !== pkg.version 
+                const versionStatus = latestVersion
+                    ? (latestVersion !== pkg.version
                         ? ` (⚠️ New version v${latestVersion} available)`
                         : ' (✅ Up to date)')
                     : ' (⚠️ Unable to check updates)';
@@ -140,7 +140,7 @@ module.exports = function handleConnectionUpdate(client, restartFunction) {
         // Handle "close" (disconnected) state
         if (connection === 'close') {
             const statusCode = lastDisconnect?.error?.output?.statusCode;
-            
+
             // Increment reconnect counter
             global.db.reconnect = (global.db.reconnect || 0) + 1;
 
@@ -153,7 +153,7 @@ module.exports = function handleConnectionUpdate(client, restartFunction) {
             // Check max reconnect attempts
             const maxRestart = Number(process.env.MAX_RESTART || 3);
             if (global.db.reconnect >= maxRestart) {
-                console.error('ERROR', 
+                console.error('ERROR',
                     `[x] Max reconnect attempts reached (${global.db.reconnect}/${maxRestart})`
                 );
                 global.db.reconnect = 0;
@@ -161,12 +161,16 @@ module.exports = function handleConnectionUpdate(client, restartFunction) {
             }
 
             // Log disconnection and schedule reconnect
-            console.warn('WARN', 
+            console.warn('WARN',
                 `[!] Disconnected (${statusCode || 'unknown'}), retrying... (${global.db.reconnect}/${maxRestart})`
             );
-            
+
             // Schedule reconnect after delay
-            setTimeout(() => restartFunction(), 2000);
+            if (typeof restartFunction === 'function') {
+                setTimeout(() => restartFunction(), 2000);
+            } else {
+                setTimeout(() => process.exit(0), 2000);
+            }
         }
     };
 

@@ -1,0 +1,3227 @@
+[
+  {
+    "file": "ai-chat.js",
+    "index": 0,
+    "commands": [
+      "gpt4"
+    ],
+    "alias": [
+      "gpt",
+      "ai",
+      "chatgpt",
+      "bing"
+    ],
+    "category": "Ai",
+    "description": "Ask AI a question using GPT-4",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "ai-chat.js",
+    "index": 1,
+    "commands": [
+      "metallama"
+    ],
+    "alias": [
+      "meta",
+      "llama"
+    ],
+    "category": "Ai",
+    "description": "Ask Meta LLaMA AI a question",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "ai-chat.js",
+    "index": 2,
+    "commands": [
+      "askpatron"
+    ],
+    "alias": [
+      "patronai"
+    ],
+    "category": "Ai",
+    "description": "Ask the Patron AI chatbot a question",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "ai-chat.js",
+    "index": 3,
+    "commands": [
+      "grok"
+    ],
+    "alias": [
+      "grokai",
+      "askgrok"
+    ],
+    "category": "Ai",
+    "description": "Ask AI a question using Grok AI",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "ai-helper.js",
+    "index": 0,
+    "commands": [
+      "groq"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Ask Groq Compound Beta Mini AI",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "ai-helper.js",
+    "index": 1,
+    "commands": [
+      "deepseek"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Ask Deepseek R1 AI",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "anti-mention.js",
+    "index": 0,
+    "commands": [
+      "antimention"
+    ],
+    "alias": [
+      "anti-tag",
+      "antitag"
+    ],
+    "category": "Group",
+    "description": "Manage anti-mention feature in a group (kick, delete, warn, off)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "auto-status.js",
+    "index": 0,
+    "commands": [
+      "autoreactstatus"
+    ],
+    "alias": [
+      "statuslike",
+      "autolike"
+    ],
+    "category": "Owner",
+    "description": "Control how the bot reacts to statuses",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "bank-info.js",
+    "index": 0,
+    "commands": [
+      "setaza"
+    ],
+    "alias": [
+      "setbank"
+    ],
+    "category": "Owner",
+    "description": "Set bank account information",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "bank-info.js",
+    "index": 1,
+    "commands": [
+      "aza"
+    ],
+    "alias": [
+      "bank"
+    ],
+    "category": "Info",
+    "description": "Get bank account information",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "bank-info.js",
+    "index": 2,
+    "commands": [
+      "clearaza"
+    ],
+    "alias": [
+      "resetbank"
+    ],
+    "category": "Owner",
+    "description": "Clear saved bank account information",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "blackbox-ai.js",
+    "index": 0,
+    "commands": [
+      "blackbox"
+    ],
+    "alias": [
+      "askbb",
+      "blackboxai"
+    ],
+    "category": "Ai",
+    "description": "Ask Blackbox AI a question",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "bot-control.js",
+    "index": 0,
+    "commands": [
+      "antidelete"
+    ],
+    "alias": [
+      "anti-delete",
+      "delete"
+    ],
+    "category": "Settings",
+    "description": "Enable or disable message deletion protection",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "bot-control.js",
+    "index": 1,
+    "commands": [
+      "anticall"
+    ],
+    "alias": [
+      "call",
+      "anti-delete"
+    ],
+    "category": "Settings",
+    "description": "Control how the bot handles incoming calls",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "bot-settings.js",
+    "index": 0,
+    "commands": [
+      "autoread",
+      "readsw",
+      "typing",
+      "online",
+      "status"
+    ],
+    "alias": [],
+    "category": "Settings",
+    "description": "Change bot fake settings",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "channel-react.js",
+    "index": 0,
+    "commands": [
+      "channel-react"
+    ],
+    "alias": [
+      "chr",
+      "chreact",
+      "reactch",
+      "creact"
+    ],
+    "category": "Owner",
+    "description": "React to channel messages with stylized text",
+    "use": "<channel-link> <text>",
+    "hasExecute": true
+  },
+  {
+    "file": "convert-audio.js",
+    "index": 0,
+    "commands": [
+      "toaudio"
+    ],
+    "alias": [
+      "tomp3",
+      "toaud"
+    ],
+    "category": "Converter",
+    "description": "Convert sound to audio",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "convert-audio.js",
+    "index": 1,
+    "commands": [
+      "tovn"
+    ],
+    "alias": [
+      "voicenote",
+      "toptt"
+    ],
+    "category": "Converter",
+    "description": "Convert sound to voice note",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "convert-audio.js",
+    "index": 2,
+    "commands": [
+      "bass",
+      "blown",
+      "deep",
+      "earrape",
+      "fast",
+      "fat",
+      "nightcore",
+      "reverse",
+      "robot",
+      "slow",
+      "smooth",
+      "squirrel"
+    ],
+    "alias": [],
+    "category": "Converter",
+    "description": "Apply audio effects",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "convert-media.js",
+    "index": 0,
+    "commands": [
+      "take"
+    ],
+    "alias": [
+      "steal",
+      "stickertake",
+      "wm"
+    ],
+    "category": "Converter",
+    "description": "Steal a sticker with custom pack and author",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "convert-media.js",
+    "index": 1,
+    "commands": [
+      "toimg"
+    ],
+    "alias": [
+      "toimage"
+    ],
+    "category": "Converter",
+    "description": "Convert sticker to image",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "convert-media.js",
+    "index": 2,
+    "commands": [
+      "sticker"
+    ],
+    "alias": [
+      "stik",
+      "s"
+    ],
+    "category": "Converter",
+    "description": "Create a sticker from image or video",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "convert-smeme.js",
+    "index": 0,
+    "commands": [
+      "smeme"
+    ],
+    "alias": [],
+    "category": "Converter",
+    "description": "Create a sticker meme from an image and text",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "convert-url.js",
+    "index": 0,
+    "commands": [
+      "tourl"
+    ],
+    "alias": [
+      "url"
+    ],
+    "category": "Converter",
+    "description": "Upload media to URL",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "convert-url.js",
+    "index": 1,
+    "commands": [
+      "shorturl"
+    ],
+    "alias": [
+      "shorten",
+      "tinyurl",
+      "shortlink"
+    ],
+    "category": "Converter",
+    "description": "Shorten a URL",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "creategc.js",
+    "index": 0,
+    "commands": [
+      "newgc"
+    ],
+    "alias": [
+      "creategc"
+    ],
+    "category": "Group",
+    "description": "Create a new group with only the bot and the owner added.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-apk.js",
+    "index": 0,
+    "commands": [
+      "apk"
+    ],
+    "alias": [],
+    "category": "Downloader",
+    "description": "Search and download APK from Aptoide",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-file.js",
+    "index": 0,
+    "commands": [
+      "mediafire"
+    ],
+    "alias": [
+      "mf"
+    ],
+    "category": "Downloader",
+    "description": "Download MediaFire file from a link",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-file.js",
+    "index": 1,
+    "commands": [
+      "gitclone"
+    ],
+    "alias": [],
+    "category": "Downloader",
+    "description": "Clone a GitHub repository from URL",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-new.js",
+    "index": 0,
+    "commands": [
+      "spotify"
+    ],
+    "alias": [
+      "spot",
+      "spplay"
+    ],
+    "category": "Downloader",
+    "description": "Download and play a song from Spotify",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-new.js",
+    "index": 1,
+    "commands": [
+      "capcut"
+    ],
+    "alias": [],
+    "category": "Downloader",
+    "description": "Download Capcut video by URL",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-new.js",
+    "index": 2,
+    "commands": [
+      "twitter"
+    ],
+    "alias": [
+      "x"
+    ],
+    "category": "Downloader",
+    "description": "Download Twitter/X video",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-pin.js",
+    "index": 0,
+    "commands": [
+      "img"
+    ],
+    "alias": [
+      "pinterest"
+    ],
+    "category": "Downloader",
+    "description": "Download Pinterest images from a search query (e.g. \"img cat 5\")",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-pin.js",
+    "index": 1,
+    "commands": [
+      "pindl"
+    ],
+    "alias": [
+      "pin",
+      "pinterestdl"
+    ],
+    "category": "Downloader",
+    "description": "Download Pinterest media from a pin URL",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-social.js",
+    "index": 0,
+    "commands": [
+      "insta"
+    ],
+    "alias": [
+      "instagram",
+      "ig",
+      "igdl"
+    ],
+    "category": "Downloader",
+    "description": "Download Instagram media",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-social.js",
+    "index": 1,
+    "commands": [
+      "facebook2"
+    ],
+    "alias": [
+      "fb2",
+      "fbvid2",
+      "fbvideo2"
+    ],
+    "category": "Downloader",
+    "description": "Download Facebook media",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-social.js",
+    "index": 2,
+    "commands": [
+      "tiktok"
+    ],
+    "alias": [
+      "tt",
+      "ttvid"
+    ],
+    "category": "Downloader",
+    "description": "Download TikTok video",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-social.js",
+    "index": 3,
+    "commands": [
+      "tiktokmp3"
+    ],
+    "alias": [
+      "ttmp3",
+      "tiktoksound"
+    ],
+    "category": "Downloader",
+    "description": "Download TikTok audio",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-social.js",
+    "index": 4,
+    "commands": [
+      "shortlink-dl"
+    ],
+    "alias": [],
+    "category": "Downloader",
+    "description": "Download media from a shortened link",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-youtube.js",
+    "index": 0,
+    "commands": [
+      "yta"
+    ],
+    "alias": [
+      "ytmp3",
+      "ytaudio"
+    ],
+    "category": "Downloader",
+    "description": "Download YouTube audio (MP3)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-youtube.js",
+    "index": 1,
+    "commands": [
+      "ytv"
+    ],
+    "alias": [
+      "ytmp4",
+      "ytvideo",
+      "mp4"
+    ],
+    "category": "Downloader",
+    "description": "Download YouTube video as MP4",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader-youtube.js",
+    "index": 2,
+    "commands": [
+      "ytg"
+    ],
+    "alias": [
+      "ytgrab"
+    ],
+    "category": "Downloader",
+    "description": "Search and download YouTube video",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader.js",
+    "index": 0,
+    "commands": [
+      "facebook"
+    ],
+    "alias": [
+      "fb",
+      "fbvid",
+      "fbvideo"
+    ],
+    "category": "Downloader",
+    "description": "Download Facebook videos",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader.js",
+    "index": 1,
+    "commands": [
+      "instagram"
+    ],
+    "alias": [
+      "ig",
+      "ig2"
+    ],
+    "category": "Downloader",
+    "description": "Download Instagram photos/videos",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "downloader.js",
+    "index": 2,
+    "commands": [
+      "tiktok2"
+    ],
+    "alias": [
+      "tt2"
+    ],
+    "category": "Downloader",
+    "description": "Download TikTok videos",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "emix-util.js",
+    "index": 0,
+    "commands": [
+      "emix"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Combine two emojis into a sticker.",
+    "use": "😂,🙂",
+    "hasExecute": true
+  },
+  {
+    "file": "emotions-tool.js",
+    "index": 0,
+    "commands": [
+      "happy"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Displays a dynamic edit msg for fun.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "emotions-tool.js",
+    "index": 1,
+    "commands": [
+      "heart"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Displays a dynamic edit msg for fun.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "emotions-tool.js",
+    "index": 2,
+    "commands": [
+      "angry"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Displays a dynamic edit msg for fun.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "emotions-tool.js",
+    "index": 3,
+    "commands": [
+      "sad"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Displays a dynamic edit msg for fun.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "emotions-tool.js",
+    "index": 4,
+    "commands": [
+      "shy"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Displays a dynamic edit msg for fun.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "emotions-tool.js",
+    "index": 5,
+    "commands": [
+      "moon"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Displays a dynamic edit msg for fun.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "emotions-tool.js",
+    "index": 6,
+    "commands": [
+      "confused"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Displays a dynamic edit msg for fun.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "emotions-tool.js",
+    "index": 7,
+    "commands": [
+      "hot"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Displays a dynamic edit msg for fun.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "external-disable.js",
+    "index": 0,
+    "commands": [
+      "disable"
+    ],
+    "alias": [],
+    "category": "External",
+    "description": "Disable a command (by name or alias)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "external-disable.js",
+    "index": 1,
+    "commands": [
+      "enable"
+    ],
+    "alias": [],
+    "category": "External",
+    "description": "Enable a previously disabled command",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "external-disable.js",
+    "index": 2,
+    "commands": [
+      "listdisabled"
+    ],
+    "alias": [],
+    "category": "External",
+    "description": "List all disabled commands",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "external-plugin.js",
+    "index": 0,
+    "commands": [
+      "install"
+    ],
+    "alias": [],
+    "category": "External",
+    "description": "Install a plugin from a raw GitHub URL",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 0,
+    "commands": [
+      "bite"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Bite someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 1,
+    "commands": [
+      "bully"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Bully someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 2,
+    "commands": [
+      "blush"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Blush reaction",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 3,
+    "commands": [
+      "cringe"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Cringe reaction",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 4,
+    "commands": [
+      "cry"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Cry reaction",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 5,
+    "commands": [
+      "cuddle"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Cuddle someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 6,
+    "commands": [
+      "dance"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Dance reaction",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 7,
+    "commands": [
+      "hug"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Hug someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 8,
+    "commands": [
+      "happy"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Happy reaction",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 9,
+    "commands": [
+      "highfive"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Highfive someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 10,
+    "commands": [
+      "kill"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Kill someone (reaction)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 11,
+    "commands": [
+      "kiss"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Kiss someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 12,
+    "commands": [
+      "lick"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Lick someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 13,
+    "commands": [
+      "poke"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Poke someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 14,
+    "commands": [
+      "pat"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Pat someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 15,
+    "commands": [
+      "smug"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Smug reaction",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 16,
+    "commands": [
+      "slap"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Slap someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 17,
+    "commands": [
+      "smile"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Smile reaction",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 18,
+    "commands": [
+      "wink"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Wink at someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "fun-reaction.js",
+    "index": 19,
+    "commands": [
+      "wave"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Wave at someone",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "get-pair.js",
+    "index": 0,
+    "commands": [
+      "pair"
+    ],
+    "alias": [
+      "getpair",
+      "clonebot"
+    ],
+    "category": "Other",
+    "description": "Generate a pairing code",
+    "use": "<phone_number>",
+    "hasExecute": true
+  },
+  {
+    "file": "group-acceptall.js",
+    "index": 0,
+    "commands": [
+      "requestlist"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Shows pending group join requests",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-acceptall.js",
+    "index": 1,
+    "commands": [
+      "acceptall"
+    ],
+    "alias": [
+      "approve"
+    ],
+    "category": "Group",
+    "description": "Accepts all pending group join requests",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-acceptall.js",
+    "index": 2,
+    "commands": [
+      "rejectall"
+    ],
+    "alias": [
+      "unapprove",
+      "reject"
+    ],
+    "category": "Group",
+    "description": "Rejects all pending group join requests",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-add.js",
+    "index": 0,
+    "commands": [
+      "add"
+    ],
+    "alias": [
+      "a"
+    ],
+    "category": "Group",
+    "description": "Adds a member to the group",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-admin.js",
+    "index": 0,
+    "commands": [
+      "promote"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Promote a member to admin",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-admin.js",
+    "index": 1,
+    "commands": [
+      "demote"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Demote a group admin",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-admin.js",
+    "index": 2,
+    "commands": [
+      "kick"
+    ],
+    "alias": [
+      "remove",
+      "k"
+    ],
+    "category": "Group",
+    "description": "Remove a user from the group",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-admin.js",
+    "index": 3,
+    "commands": [
+      "mute"
+    ],
+    "alias": [
+      "close"
+    ],
+    "category": "Group",
+    "description": "Mute the group (only admins can send messages)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-admin.js",
+    "index": 4,
+    "commands": [
+      "unmute"
+    ],
+    "alias": [
+      "open"
+    ],
+    "category": "Group",
+    "description": "Unmute the group (everyone can send messages)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-gdesc.js",
+    "index": 0,
+    "commands": [
+      "gdesc"
+    ],
+    "alias": [
+      "upgdesc",
+      "updategdesc"
+    ],
+    "category": "Group",
+    "description": "Change the group description",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-gname.js",
+    "index": 0,
+    "commands": [
+      "gname"
+    ],
+    "alias": [
+      "upgname",
+      "updategname"
+    ],
+    "category": "Group",
+    "description": "Change the group name.",
+    "use": "<new_name>",
+    "hasExecute": true
+  },
+  {
+    "file": "group-helper.js",
+    "index": 0,
+    "commands": [
+      "hidetag"
+    ],
+    "alias": [
+      "ht"
+    ],
+    "category": "Group",
+    "description": "Mention everyone with quoted text or media only",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-helper.js",
+    "index": 1,
+    "commands": [
+      "tagadmin"
+    ],
+    "alias": [
+      "listadmin",
+      "admin"
+    ],
+    "category": "Group",
+    "description": "Mention all group admins",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-helper.js",
+    "index": 2,
+    "commands": [
+      "revoke"
+    ],
+    "alias": [
+      "resetlink"
+    ],
+    "category": "Group",
+    "description": "Reset the group invite link",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-helper.js",
+    "index": 3,
+    "commands": [
+      "grouplink"
+    ],
+    "alias": [
+      "invite",
+      "gclink"
+    ],
+    "category": "Group",
+    "description": "Get current group invite link",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-helper.js",
+    "index": 4,
+    "commands": [
+      "tag"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Tag all members with message or media",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-helper.js",
+    "index": 5,
+    "commands": [
+      "tagall"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Mention all group members with optional message",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-info.js",
+    "index": 0,
+    "commands": [
+      "ginfo"
+    ],
+    "alias": [
+      "groupinfo"
+    ],
+    "category": "Group",
+    "description": "Get group information",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-kickall.js",
+    "index": 0,
+    "commands": [
+      "kickall",
+      "removemembers",
+      "endgc",
+      "endgroup"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Remove all non-admin members from the group.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-kickall.js",
+    "index": 1,
+    "commands": [
+      "removeadmins",
+      "kickadmins",
+      "deladmins",
+      "kickall3"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Remove all admin members from the group, excluding the bot and bot owner.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-leave.js",
+    "index": 0,
+    "commands": [
+      "leave"
+    ],
+    "alias": [
+      "left",
+      "leftgc",
+      "leavegc"
+    ],
+    "category": "Owner",
+    "description": "Leave the group",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-out.js",
+    "index": 0,
+    "commands": [
+      "out"
+    ],
+    "alias": [
+      "ck",
+      "🦶"
+    ],
+    "category": "admin",
+    "description": "Removes all members with specific country code from the group",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-poll.js",
+    "index": 0,
+    "commands": [
+      "poll"
+    ],
+    "alias": [],
+    "category": "group",
+    "description": "Create a poll with a question and options in the group.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-request.js",
+    "index": 0,
+    "commands": [
+      "request"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Check pending group join requests",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-request.js",
+    "index": 1,
+    "commands": [
+      "approve"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Approve all pending group join requests",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-request.js",
+    "index": 2,
+    "commands": [
+      "reject"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Reject a specific user or all pending join requests",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-settings.js",
+    "index": 0,
+    "commands": [
+      "antilink"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Manage anti-link feature in a group (kick, delete, warn, off)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-spamtag.js",
+    "index": 0,
+    "commands": [
+      "spamtag"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Mention a user multiple times with optional message",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-timer.js",
+    "index": 0,
+    "commands": [
+      "opentime"
+    ],
+    "alias": [
+      "gopen"
+    ],
+    "category": "Group",
+    "description": "Schedule group to open after specific time",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-timer.js",
+    "index": 1,
+    "commands": [
+      "closetime"
+    ],
+    "alias": [
+      "gclose"
+    ],
+    "category": "Group",
+    "description": "Schedule group to close after specific time",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-warn.js",
+    "index": 0,
+    "commands": [
+      "warn"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Warn a user in group chat",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-warn.js",
+    "index": 1,
+    "commands": [
+      "delwarn"
+    ],
+    "alias": [
+      "removewarn",
+      "delwarns",
+      "remwarn"
+    ],
+    "category": "Group",
+    "description": "Reduce warning count of a user",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-warn.js",
+    "index": 2,
+    "commands": [
+      "resetwarn"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Reset warning count for a user",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-welcome.js",
+    "index": 0,
+    "commands": [
+      "welcome"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Enable or disable welcome messages in a group",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-welcome.js",
+    "index": 1,
+    "commands": [
+      "goodbye"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Enable or disable goodbye messages in a group",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-welcome.js",
+    "index": 2,
+    "commands": [
+      "pdm"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Enable or disable promote/demote tag notifications",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-welcome.js",
+    "index": 3,
+    "commands": [
+      "setwelcome"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Set a custom welcome message",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-welcome.js",
+    "index": 4,
+    "commands": [
+      "getwelcome"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Show the current welcome message",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-welcome.js",
+    "index": 5,
+    "commands": [
+      "setgoodbye"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Set a custom goodbye message",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "group-welcome.js",
+    "index": 6,
+    "commands": [
+      "getgoodbye"
+    ],
+    "alias": [],
+    "category": "Group",
+    "description": "Show the current goodbye message",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "images-fun.js",
+    "index": 0,
+    "commands": [
+      "lolicon"
+    ],
+    "alias": [
+      "imgloli"
+    ],
+    "category": "Fun",
+    "description": "Download anime lolicon images.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "images-fun.js",
+    "index": 1,
+    "commands": [
+      "waifu2"
+    ],
+    "alias": [
+      "imgwaifu2"
+    ],
+    "category": "Fun",
+    "description": "Download anime waifu images (NSFW).",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "images-fun.js",
+    "index": 2,
+    "commands": [
+      "neko"
+    ],
+    "alias": [
+      "imgneko"
+    ],
+    "category": "Fun",
+    "description": "Download anime neko images.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "images-fun.js",
+    "index": 3,
+    "commands": [
+      "megumin"
+    ],
+    "alias": [
+      "imgmegumin"
+    ],
+    "category": "Fun",
+    "description": "Download anime megumin images.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "images-fun.js",
+    "index": 4,
+    "commands": [
+      "maid"
+    ],
+    "alias": [
+      "imgmaid"
+    ],
+    "category": "Fun",
+    "description": "Download anime maid images.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "images-fun.js",
+    "index": 5,
+    "commands": [
+      "awoo"
+    ],
+    "alias": [
+      "imgawoo"
+    ],
+    "category": "Fun",
+    "description": "Download anime awoo images.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "images-fun.js",
+    "index": 6,
+    "commands": [
+      "animegirl"
+    ],
+    "alias": [
+      "imganimegirl"
+    ],
+    "category": "Fun",
+    "description": "Fetch a random anime girl image.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "images-fun.js",
+    "index": 7,
+    "commands": [
+      "garl"
+    ],
+    "alias": [
+      "imggarl"
+    ],
+    "category": "Fun",
+    "description": "Download anime garl images.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "imagine.js",
+    "index": 0,
+    "commands": [
+      "fluxai"
+    ],
+    "alias": [
+      "flux",
+      "imagine"
+    ],
+    "category": "Ai",
+    "description": "Generate an image using Flux AI.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-alive.js",
+    "index": 0,
+    "commands": [
+      "alive"
+    ],
+    "alias": [],
+    "category": "Info",
+    "description": "Check if the bot is alive",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-alive.js",
+    "index": 1,
+    "commands": [
+      "setalive"
+    ],
+    "alias": [],
+    "category": "Owner",
+    "description": "Set custom alive message with optional image or video URLs",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-bot.js",
+    "index": 0,
+    "commands": [
+      "ping"
+    ],
+    "alias": [],
+    "category": "Info",
+    "description": "Check bot latency",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-bot.js",
+    "index": 1,
+    "commands": [
+      "uptime"
+    ],
+    "alias": [
+      "runtime"
+    ],
+    "category": "Info",
+    "description": "Check bot runtime",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-bot.js",
+    "index": 2,
+    "commands": [
+      "test"
+    ],
+    "alias": [
+      "bot"
+    ],
+    "category": "Info",
+    "description": "Test command",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-helper.js",
+    "index": 0,
+    "commands": [
+      "list"
+    ],
+    "alias": [],
+    "category": "Info",
+    "description": "List all available commands",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-helper.js",
+    "index": 1,
+    "commands": [
+      "help"
+    ],
+    "alias": [],
+    "category": "Info",
+    "description": "Show info about a specific command",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-menu.js",
+    "index": 0,
+    "commands": [
+      "menu"
+    ],
+    "alias": [
+      "allmenu"
+    ],
+    "category": "Info",
+    "description": "Show bot menu command list",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-repo.js",
+    "index": 0,
+    "commands": [
+      "repo"
+    ],
+    "alias": [
+      "sc",
+      "script",
+      "info"
+    ],
+    "category": "Info",
+    "description": "Fetch GitHub repository information",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "info-support.js",
+    "index": 0,
+    "commands": [
+      "owner"
+    ],
+    "alias": [],
+    "category": "Info",
+    "description": "Get owner contact",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-gfx.js",
+    "index": 0,
+    "commands": [
+      "gfx",
+      "gfx1",
+      "gfx2",
+      "gfx3",
+      "gfx4",
+      "gfx5",
+      "gfx6",
+      "gfx7",
+      "gfx8",
+      "gfx9",
+      "gfx10",
+      "gfx11",
+      "gfx12"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Generate stylish GFX logos",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-gfx.js",
+    "index": 1,
+    "commands": [
+      "warningsign"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Generate Warning Sign design",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-gfx.js",
+    "index": 2,
+    "commands": [
+      "pubg"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Generate PUBG Mascot 2 design",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-gfx.js",
+    "index": 3,
+    "commands": [
+      "avengers"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Generate Avengers style design",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-gfx.js",
+    "index": 4,
+    "commands": [
+      "graffiti"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create graffiti-style artwork",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-gfx.js",
+    "index": 5,
+    "commands": [
+      "matrix"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Generate Matrix-style logo",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-gfx.js",
+    "index": 6,
+    "commands": [
+      "pixabay"
+    ],
+    "alias": [],
+    "category": "Downloader",
+    "description": "Search for free stock images via Pixabay",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-gfx.js",
+    "index": 7,
+    "commands": [
+      "onepiece"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Generate One Piece style logo",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-maker.js",
+    "index": 0,
+    "commands": [
+      "dragonball"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Create a Dragon Ball-style text effect",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-maker.js",
+    "index": 1,
+    "commands": [
+      "deadpool"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Create a Deadpool-style text effect",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-maker.js",
+    "index": 2,
+    "commands": [
+      "naruto"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Create a Naruto-style logo",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-maker.js",
+    "index": 3,
+    "commands": [
+      "pornhub"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Create a Pornhub-style logo",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-maker.js",
+    "index": 4,
+    "commands": [
+      "futuristic"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Create a futuristic text effect",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-maker.js",
+    "index": 5,
+    "commands": [
+      "clouds"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Create a Cloud text effect",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-maker.js",
+    "index": 6,
+    "commands": [
+      "zodiac"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Create Zodiac text effect",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-maker.js",
+    "index": 7,
+    "commands": [
+      "sand"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Create Sand text effect",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "logo-maker.js",
+    "index": 8,
+    "commands": [
+      "birthday"
+    ],
+    "alias": [],
+    "category": "Ai",
+    "description": "Create Birthday text effect",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "maker-logo.js",
+    "index": 0,
+    "commands": [
+      "wanted"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create a wanted poster also reply to someone's message to use the profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "maker-logo.js",
+    "index": 1,
+    "commands": [
+      "jail"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create a jail poster also reply to someone's message to use the profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "maker-logo.js",
+    "index": 2,
+    "commands": [
+      "nokia"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create a nokia poster also reply to someone's message to use the profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "maker-logo.js",
+    "index": 3,
+    "commands": [
+      "gun"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create a gun image poster also reply to someone's message to use the profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "maker-logo.js",
+    "index": 4,
+    "commands": [
+      "ad"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create an ad image also reply to someone's message to use the profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "maker-logo.js",
+    "index": 5,
+    "commands": [
+      "blur"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create a blur image also reply to someone's message to use the profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "maker-logo.js",
+    "index": 6,
+    "commands": [
+      "invert"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create an invert image also reply to someone's message to use the profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "maker-logo.js",
+    "index": 7,
+    "commands": [
+      "mnm"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create an M&M's image also reply to someone's message to use the profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "maker-logo.js",
+    "index": 8,
+    "commands": [
+      "caution"
+    ],
+    "alias": [],
+    "category": "Logo",
+    "description": "Create a caution fake logo image",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "manage-env.js",
+    "index": 0,
+    "commands": [
+      "setenv"
+    ],
+    "alias": [
+      "updateenv"
+    ],
+    "category": "EnvManager",
+    "description": "Update bot settings",
+    "use": "<key> <value>",
+    "hasExecute": true
+  },
+  {
+    "file": "manage-env.js",
+    "index": 1,
+    "commands": [
+      "envinfo"
+    ],
+    "alias": [
+      "getenv",
+      "showenv"
+    ],
+    "category": "EnvManager",
+    "description": "Show current bot settings",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "now-art.js",
+    "index": 0,
+    "commands": [
+      "nowchat"
+    ],
+    "alias": [
+      "nowai",
+      "asknow"
+    ],
+    "category": "Ai",
+    "description": "Ask NowTech AI a question",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "now-art.js",
+    "index": 1,
+    "commands": [
+      "nowimg"
+    ],
+    "alias": [
+      "nowart",
+      "nowartimg"
+    ],
+    "category": "Ai",
+    "description": "Generate AI image using NowTech Art",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "npm-search.js",
+    "index": 0,
+    "commands": [
+      "npm"
+    ],
+    "alias": [
+      "npmsearch",
+      "npmsearcher"
+    ],
+    "category": "Tool",
+    "description": "Search for a package on npm.",
+    "use": "<package-name>",
+    "hasExecute": true
+  },
+  {
+    "file": "nsfw-media.js",
+    "index": 0,
+    "commands": [
+      "xnxxdl"
+    ],
+    "alias": [
+      "xnxxdownload"
+    ],
+    "category": "Nsfw",
+    "description": "🔞 Download XNXX Video",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "nsfw-media.js",
+    "index": 1,
+    "commands": [
+      "xnxxsearch"
+    ],
+    "alias": [
+      "xns"
+    ],
+    "category": "Nsfw",
+    "description": "🔍 Search videos on XNXX",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-bc.js",
+    "index": 0,
+    "commands": [
+      "broadcast"
+    ],
+    "alias": [
+      "bc"
+    ],
+    "category": "Owner",
+    "description": "Broadcast text or media to all groups",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-bc.js",
+    "index": 1,
+    "commands": [
+      "logout"
+    ],
+    "alias": [],
+    "category": "Owner",
+    "description": "Logout bot from all devices",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-block.js",
+    "index": 0,
+    "commands": [
+      "block"
+    ],
+    "alias": [
+      "blk"
+    ],
+    "category": "Privacy",
+    "description": "Block a user (reply/tag/number)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-block.js",
+    "index": 1,
+    "commands": [
+      "unblock"
+    ],
+    "alias": [
+      "ublk"
+    ],
+    "category": "Privacy",
+    "description": "Unblock a user (reply/tag/number)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-block.js",
+    "index": 2,
+    "commands": [
+      "listblock"
+    ],
+    "alias": [
+      "blocklist"
+    ],
+    "category": "Privacy",
+    "description": "List all blocked contacts",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-block.js",
+    "index": 3,
+    "commands": [
+      "listgroup"
+    ],
+    "alias": [
+      "listgc"
+    ],
+    "category": "Owner",
+    "description": "List all joined group chats",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-mode.js",
+    "index": 0,
+    "commands": [
+      "mode"
+    ],
+    "alias": [],
+    "category": "Owner",
+    "description": "Change bot mode: public/private",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-mode.js",
+    "index": 1,
+    "commands": [
+      "areact"
+    ],
+    "alias": [
+      "areact2"
+    ],
+    "category": "Owner",
+    "description": "Auto react mode: cmd/all/off",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-pfp.js",
+    "index": 0,
+    "commands": [
+      "save"
+    ],
+    "alias": [
+      "sv",
+      "send"
+    ],
+    "category": "Info",
+    "description": "Download and forward a quoted message (text, media, sticker, doc)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-pfp.js",
+    "index": 1,
+    "commands": [
+      "setpp"
+    ],
+    "alias": [],
+    "category": "Owner",
+    "description": "Set bot profile picture (reply to image)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-pfp.js",
+    "index": 2,
+    "commands": [
+      "delpp"
+    ],
+    "alias": [],
+    "category": "Owner",
+    "description": "Remove bot profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-settings.js",
+    "index": 0,
+    "commands": [
+      "clear"
+    ],
+    "alias": [],
+    "category": "Owner",
+    "description": "Clear chat for bot account (owner only)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-setvar.js",
+    "index": 0,
+    "commands": [
+      "setvar"
+    ],
+    "alias": [],
+    "category": "External",
+    "description": "Set environment variable (Heroku only)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-setvar.js",
+    "index": 1,
+    "commands": [
+      "getvar"
+    ],
+    "alias": [
+      "listvar"
+    ],
+    "category": "External",
+    "description": "List environment variables (Heroku only)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "owner-setvar.js",
+    "index": 2,
+    "commands": [
+      "delvar"
+    ],
+    "alias": [],
+    "category": "External",
+    "description": "Delete environment variable (Heroku only)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "patron-info.js",
+    "index": 0,
+    "commands": [
+      "patron-info"
+    ],
+    "alias": [
+      "patroninfo",
+      "patron",
+      "manual"
+    ],
+    "category": "Info",
+    "description": "Information on how to use the bot.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "privacy-menu.js",
+    "index": 0,
+    "commands": [
+      "privacymenu",
+      "privacy"
+    ],
+    "alias": [],
+    "category": "Privacy",
+    "description": "Privacy settings menu",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "privacy-menu.js",
+    "index": 1,
+    "commands": [
+      "setmyname"
+    ],
+    "alias": [],
+    "category": "Privacy",
+    "description": "Set your WhatsApp display name.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "privacy-menu.js",
+    "index": 2,
+    "commands": [
+      "getbio"
+    ],
+    "alias": [],
+    "category": "Privacy",
+    "description": "Get user's bio",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "privacy-menu.js",
+    "index": 3,
+    "commands": [
+      "setppall"
+    ],
+    "alias": [],
+    "category": "Privacy",
+    "description": "Update Profile Picture Privacy",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "privacy-menu.js",
+    "index": 4,
+    "commands": [
+      "setonline"
+    ],
+    "alias": [],
+    "category": "Privacy",
+    "description": "Update Online Privacy",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "privacy-menu.js",
+    "index": 5,
+    "commands": [
+      "updatebio"
+    ],
+    "alias": [],
+    "category": "Privacy",
+    "description": "Change bot's bio",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "privacy-menu.js",
+    "index": 6,
+    "commands": [
+      "groupsPrivacy"
+    ],
+    "alias": [],
+    "category": "Privacy",
+    "description": "Update Group Add Privacy",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "privacy-menu.js",
+    "index": 7,
+    "commands": [
+      "getPrivacy"
+    ],
+    "alias": [],
+    "category": "Privacy",
+    "description": "View current Privacy settings",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "privacy-menu.js",
+    "index": 8,
+    "commands": [
+      "getpp"
+    ],
+    "alias": [],
+    "category": "Privacy",
+    "description": "Fetch group profile picture",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "quote.js",
+    "index": 0,
+    "commands": [
+      "quote"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Get a random inspiring quote.",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "repo-search.js",
+    "index": 0,
+    "commands": [
+      "searchrepo"
+    ],
+    "alias": [
+      "srepo"
+    ],
+    "category": "Other",
+    "description": "Fetch information about a GitHub repository.",
+    "use": "<owner/repo>",
+    "hasExecute": true
+  },
+  {
+    "file": "savecontact.js",
+    "index": 0,
+    "commands": [
+      "savecontact"
+    ],
+    "alias": [
+      "svcontact",
+      "exportcontact"
+    ],
+    "category": "Group",
+    "description": "Save and Export Group Contacts as VCF",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "send-invite.js",
+    "index": 0,
+    "commands": [
+      "send-invite"
+    ],
+    "alias": [
+      "sendinvite"
+    ],
+    "category": "Group",
+    "description": "Invite a user to the group via link",
+    "use": "<phone number>",
+    "hasExecute": true
+  },
+  {
+    "file": "song-play.js",
+    "index": 0,
+    "commands": [
+      "song"
+    ],
+    "alias": [
+      "play",
+      "music",
+      "ytplay"
+    ],
+    "category": "Downloader",
+    "description": "Search and download YouTube audio",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "ss-tweet.js",
+    "index": 0,
+    "commands": [
+      "sstweet"
+    ],
+    "alias": [
+      "ss-twitter",
+      "tweetcap"
+    ],
+    "category": "Tool",
+    "description": "Take a screenshot of a Tweet by URL",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "sticker-q.js",
+    "index": 0,
+    "commands": [
+      "quote"
+    ],
+    "alias": [
+      "q",
+      "qc"
+    ],
+    "category": "Tool",
+    "description": "Makes a sticker from quoted text or inline text.",
+    "use": "<reply to any message or write text>",
+    "hasExecute": true
+  },
+  {
+    "file": "text2image.js",
+    "index": 0,
+    "commands": [
+      "txt2img"
+    ],
+    "alias": [
+      "text2image"
+    ],
+    "category": "Ai",
+    "description": "Generate an image based on your text prompt",
+    "use": "<text-prompt>",
+    "hasExecute": true
+  },
+  {
+    "file": "tictactoe.js",
+    "index": 0,
+    "commands": [
+      "tictactoe"
+    ],
+    "alias": [
+      "ttt",
+      "xo"
+    ],
+    "category": "Game",
+    "description": "Start a Tic Tac Toe game in a group",
+    "use": "<opponent-number>",
+    "hasExecute": true
+  },
+  {
+    "file": "tictactoe.js",
+    "index": 1,
+    "commands": [
+      "tttstop"
+    ],
+    "alias": [],
+    "category": "Game",
+    "description": "Force stop any active Tic Tac Toe game",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "toanime.js",
+    "index": 0,
+    "commands": [
+      "toanime"
+    ],
+    "alias": [],
+    "category": "AI",
+    "description": "Convert image to anime style",
+    "use": "(reply to image)",
+    "hasExecute": true
+  },
+  {
+    "file": "toanime.js",
+    "index": 1,
+    "commands": [
+      "toghibli"
+    ],
+    "alias": [],
+    "category": "AI",
+    "description": "Convert image to Ghibli style",
+    "use": "(reply to image)",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-fetch.js",
+    "index": 0,
+    "commands": [
+      "fetch"
+    ],
+    "alias": [
+      "api"
+    ],
+    "category": "Tool",
+    "description": "Fetch data from a provided URL or API",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-fun.js",
+    "index": 0,
+    "commands": [
+      "joke"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Get a random joke",
+    "use": ".joke",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-fun.js",
+    "index": 1,
+    "commands": [
+      "flirt"
+    ],
+    "alias": [
+      "masom",
+      "pickup"
+    ],
+    "category": "Fun",
+    "description": "Get a random flirt or pickup line.",
+    "use": ".flirt",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-fun.js",
+    "index": 2,
+    "commands": [
+      "truth"
+    ],
+    "alias": [
+      "t"
+    ],
+    "category": "Fun",
+    "description": "Get a random truth question from the API.",
+    "use": ".truth",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-fun.js",
+    "index": 3,
+    "commands": [
+      "dare"
+    ],
+    "alias": [
+      "d"
+    ],
+    "category": "Fun",
+    "description": "Get a random dare from the API.",
+    "use": ".dare",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-fun.js",
+    "index": 4,
+    "commands": [
+      "fact"
+    ],
+    "alias": [],
+    "category": "Fun",
+    "description": "Get a random fun fact",
+    "use": ".fact",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-fun.js",
+    "index": 5,
+    "commands": [
+      "pickupline"
+    ],
+    "alias": [
+      "pickupline"
+    ],
+    "category": "Fun",
+    "description": "Get a random pickup line from the API.",
+    "use": ".pickupline",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-fun.js",
+    "index": 6,
+    "commands": [
+      "character"
+    ],
+    "alias": [
+      "char"
+    ],
+    "category": "Fun",
+    "description": "Check the character of a mentioned user.",
+    "use": "<@mention>",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-fun.js",
+    "index": 7,
+    "commands": [
+      "repeat"
+    ],
+    "alias": [
+      "rp",
+      "rpm"
+    ],
+    "category": "Fun",
+    "description": "Repeat a message a specified number of times.",
+    "use": "<count>,<message>",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-number.js",
+    "index": 0,
+    "commands": [
+      "tempnum"
+    ],
+    "alias": [
+      "fakenumber",
+      "getnumber"
+    ],
+    "category": "Tool",
+    "description": "Get temporary numbers & OTP instructions",
+    "use": "<country-code>",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-number.js",
+    "index": 1,
+    "commands": [
+      "templist"
+    ],
+    "alias": [
+      "tempcountries",
+      "fakenumlist"
+    ],
+    "category": "Tool",
+    "description": "Show list of countries with temp numbers",
+    "use": ".templist",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-number.js",
+    "index": 2,
+    "commands": [
+      "otpbox"
+    ],
+    "alias": [
+      "otpcheck",
+      "checkotp"
+    ],
+    "category": "Tool",
+    "description": "Check OTP messages for temporary number",
+    "use": "<full-number>",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-pdf.js",
+    "index": 0,
+    "commands": [
+      "topdf"
+    ],
+    "alias": [
+      "pdf"
+    ],
+    "category": "Tool",
+    "description": "Convert provided text to a PDF file.",
+    "use": "<text>",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-report.js",
+    "index": 0,
+    "commands": [
+      "report"
+    ],
+    "alias": [
+      "ask",
+      "request",
+      "bug"
+    ],
+    "category": "Tool",
+    "description": "Report a bug or request a feature",
+    "use": "<message>",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-ssweb.js",
+    "index": 0,
+    "commands": [
+      "ssweb"
+    ],
+    "alias": [
+      "screenshot",
+      "webss"
+    ],
+    "category": "Converter",
+    "description": "Take a screenshot of a webpage",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "tool-vv2.js",
+    "index": 0,
+    "commands": [
+      "vv2"
+    ],
+    "alias": [
+      "retrieve2",
+      "readviewonce2"
+    ],
+    "category": "Owner",
+    "description": "Resend view-once image/video/audio to the sender (owner-only)",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "tools-bot.js",
+    "index": 1,
+    "commands": [
+      "dictionary"
+    ],
+    "alias": [
+      "define",
+      "meaning"
+    ],
+    "category": "Tool",
+    "description": "Get the definition of an English word",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "tools-patron.js",
+    "index": 0,
+    "commands": [
+      "readmore"
+    ],
+    "alias": [],
+    "category": "Tool",
+    "description": "Hide text using read more",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "tools-patron.js",
+    "index": 1,
+    "commands": [
+      "lyrics"
+    ],
+    "alias": [],
+    "category": "Tool",
+    "description": "Fetch song lyrics by title",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "tools-patron.js",
+    "index": 2,
+    "commands": [
+      "trackip"
+    ],
+    "alias": [],
+    "category": "Tool",
+    "description": "Track IP address information",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "tools-patron.js",
+    "index": 3,
+    "commands": [
+      "tts"
+    ],
+    "alias": [
+      "say",
+      "gtts"
+    ],
+    "category": "Converter",
+    "description": "Convert text to speech",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "tools-patron.js",
+    "index": 4,
+    "commands": [
+      "getdevice"
+    ],
+    "alias": [
+      "device",
+      "getdevice"
+    ],
+    "category": "Tool",
+    "description": "Detect the device used by a quoted message",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "tools-vv.js",
+    "index": 0,
+    "commands": [
+      "vv"
+    ],
+    "alias": [
+      "retrieve",
+      "readviewonce"
+    ],
+    "category": "Tool",
+    "description": "Resend view-once image/video/audio to the current chat",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "ttsearch.js",
+    "index": 0,
+    "commands": [
+      "ttsearch"
+    ],
+    "alias": [
+      "tiktoksearch"
+    ],
+    "category": "Downloader",
+    "description": "Search or download TikTok video",
+    "use": "<query or TikTok link>",
+    "hasExecute": true
+  },
+  {
+    "file": "wa-bot.js",
+    "index": 0,
+    "commands": [
+      "setcmd"
+    ],
+    "alias": [],
+    "category": "Wa",
+    "description": "Set a hidden command for a sticker",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "wa-bot.js",
+    "index": 1,
+    "commands": [
+      "delcmd"
+    ],
+    "alias": [],
+    "category": "Wa",
+    "description": "Delete a command for a sticker",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "wa-gfilter.js",
+    "index": 0,
+    "commands": [
+      "gfilter"
+    ],
+    "alias": [
+      "addgfilter"
+    ],
+    "category": "Wa",
+    "description": "Add a global filter",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "wa-gfilter.js",
+    "index": 1,
+    "commands": [
+      "listgfilter"
+    ],
+    "alias": [
+      "gfilters"
+    ],
+    "category": "Wa",
+    "description": "List all global filters",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "wa-gfilter.js",
+    "index": 2,
+    "commands": [
+      "removegfilter"
+    ],
+    "alias": [
+      "deletegfilter",
+      "delgfilter"
+    ],
+    "category": "Wa",
+    "description": "Delete a global filter",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "wa-pfilter.js",
+    "index": 0,
+    "commands": [
+      "addpfilter"
+    ],
+    "alias": [
+      "pfilter"
+    ],
+    "category": "Wa",
+    "description": "Add a private chat filter",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "wa-pfilter.js",
+    "index": 1,
+    "commands": [
+      "listpfilter"
+    ],
+    "alias": [
+      "pfilters"
+    ],
+    "category": "Wa",
+    "description": "List all private chat filters",
+    "use": "",
+    "hasExecute": true
+  },
+  {
+    "file": "wa-pfilter.js",
+    "index": 2,
+    "commands": [
+      "deletepfilter"
+    ],
+    "alias": [
+      "removepfilter",
+      "delpfilter"
+    ],
+    "category": "Wa",
+    "description": "Delete a private chat filter",
+    "use": "",
+    "hasExecute": true
+  }
+]

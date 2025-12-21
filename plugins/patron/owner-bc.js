@@ -1,3 +1,8 @@
+// Ensure global.log exists (fallback if not defined globally)
+if (typeof global.log !== 'function') {
+    global.log = (level, msg) => console.log(`[${level}]`, msg);
+}
+
 module.exports = [
     {
         command: ['broadcast'],
@@ -10,11 +15,11 @@ module.exports = [
         execute: async (message, { ednut, text, isOwner, msg, sleep, isGroup, reply }) => {
             try {
                 let messageData = {};
-                
+
                 if (message.quoted && message.quoted.mimetype) {
                     const mimeType = message.quoted.mimetype;
                     const mediaBuffer = await message.quoted.download();
-                    
+
                     if (/image/.test(mimeType)) {
                         messageData = { image: mediaBuffer, caption: text || message.quoted.caption || '' };
                     } else if (/video/.test(mimeType)) {

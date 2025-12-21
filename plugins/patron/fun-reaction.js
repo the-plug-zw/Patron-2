@@ -27,8 +27,8 @@ async function fetchGifFromApiEndpoint(endpoint) {
         if (response && response.data && response.data.url) {
             return await fetchGifBufferFromUrl(response.data.url);
         }
-    } catch {}
-    
+    } catch { }
+
     try {
         const response = await axios.get(endpoint, { 'responseType': 'arraybuffer', 'timeout': 20000 });
         return Buffer.from(response.data);
@@ -41,10 +41,10 @@ async function gifToVideoBuffer(gifBuffer) {
     const randomId = Crypto.randomBytes(6).toString('hex');
     const gifPath = path.join(TMP_DIR, randomId + '.gif');
     const videoPath = path.join(TMP_DIR, randomId + '.mp4');
-    
+
     try {
         fs.writeFileSync(gifPath, gifBuffer);
-        
+
         await new Promise((resolve, reject) => {
             ffmpeg(gifPath)
                 .outputOptions(['-pix_fmt yuv420p', '-movflags faststart', '-vf scale=trunc(iw/2)*2:trunc(ih/2)*2'])
@@ -52,36 +52,41 @@ async function gifToVideoBuffer(gifBuffer) {
                 .on('end', () => resolve())
                 .save(videoPath);
         });
-        
+
         const videoBuffer = fs.readFileSync(videoPath);
         return videoBuffer;
     } finally {
         try {
             if (fs.existsSync(gifPath)) fs.unlinkSync(gifPath);
-        } catch {}
-        
+        } catch { }
+
         try {
             if (fs.existsSync(videoPath)) fs.unlinkSync(videoPath);
-        } catch {}
+        } catch { }
     }
 }
 
 async function sendReaction(message, context, reactionType, pastTense, emoji = '') {
     const { ednut, reply } = context;
-    
+
+    // Safety check - if ednut is not available, skip sending
+    if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+    }
+
     try {
         const apiUrl = 'https://api.nexoracle.com/reactions-pack/' + reactionType + '?apikey=' + NEX_APIKEY;
         const senderTag = '@' + message.sender.split('@')[0];
         const quotedSender = message.quoted ? message.quoted.sender : null;
         const quotedTag = quotedSender ? '@' + quotedSender.split('@')[0] : null;
-        
-        const caption = quotedTag 
+
+        const caption = quotedTag
             ? (senderTag + ' ' + pastTense + ' ' + quotedTag + ' ' + emoji).trim()
             : (senderTag + ' is ' + pastTense.replace(/ed$|ing$/, '') + ' the air ' + emoji).trim();
-        
+
         const gifBuffer = await fetchGifFromApiEndpoint(apiUrl);
         const videoBuffer = await gifToVideoBuffer(gifBuffer);
-        
+
         await ednut.sendMessage(message.chat, {
             'video': videoBuffer,
             'caption': caption,
@@ -91,8 +96,8 @@ async function sendReaction(message, context, reactionType, pastTense, emoji = '
     } catch (error) {
         try {
             reply('❌ Failed to send reaction.');
-        } catch {}
-        
+        } catch { }
+
         if (typeof global.log === 'function') {
             global.log('ERROR', reactionType + ' error: ' + (error.message || error));
         } else {

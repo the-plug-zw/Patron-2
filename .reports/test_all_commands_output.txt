@@ -1,0 +1,2307 @@
+[34m 
+====================================================================== [0m
+[34m COMPREHENSIVE COMMAND EXECUTION TEST [0m
+[34m ======================================================================
+ [0m
+[36m 📦 Loading all plugins... [0m
+[dotenv@17.2.3] injecting env (34) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[36m ✅ Loaded 256 commands
+ [0m
+[36m 🧪 Testing all commands (2s timeout per command)...
+ [0m
+Grok AI error: AxiosError: Request failed with status code 400
+    at settle (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:2106:12)
+    at IncomingMessage.handleStreamEnd (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:3491:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:4731:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/ai-chat.js:103:34)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9) {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.2',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https://archive.lick.eu.org/api/ai/gpt-4-logic?text=test',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /api/ai/gpt-4-logic?text=test HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.2\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: archive.lick.eu.org\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype] {},
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 2,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/ai/gpt-4-logic?text=test',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 400,
+      statusMessage: 'Bad Request',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://archive.lick.eu.org/api/ai/gpt-4-logic?text=test',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 44,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'archive.lick.eu.org',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://archive.lick.eu.org/api/ai/gpt-4-logic?text=test',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'archive.lick.eu.org',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'archive.lick.eu.org',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 4604,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 132,
+        Symbol(triggerId): 130,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 65536,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 400,
+    statusText: 'Bad Request',
+    headers: Object [AxiosHeaders] {
+      date: 'Sun, 21 Dec 2025 20:21:59 GMT',
+      'content-type': 'application/json; charset=utf-8',
+      'content-length': '120',
+      connection: 'keep-alive',
+      age: '0',
+      'cache-control': 'public, max-age=0, must-revalidate',
+      etag: 'W/"78-8yH8lFH/3D8KxkLNzswbXtd0L7k"',
+      server: 'cloudflare',
+      'strict-transport-security': 'max-age=63072000',
+      nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}',
+      'x-vercel-cache': 'MISS',
+      'x-vercel-id': 'bom1::iad1::77mpr-1766348519102-ebf523f88d77',
+      'cf-cache-status': 'DYNAMIC',
+      'x-xss-protection': '1; mode=block',
+      'speculation-rules': '"/cdn-cgi/speculation"',
+      'report-to': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=n9sYmxmq%2FzAJkRWPL%2FkErRTCx%2B90TUvgNgFPIS9nZzMpKFCa%2BPpKCW024xsME8QvZKgiWvQAREKpNP6PWCBKDlhYVCvfoFb16aESEcHW28fW100%3D"}]}',
+      'expect-ct': 'max-age=86400, enforce',
+      'referrer-policy': 'same-origin',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'cf-ray': '9b1a16c40baa3ab1-BOM',
+      'alt-svc': 'h3=":443"; ma=86400'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'get',
+      url: 'https://archive.lick.eu.org/api/ai/gpt-4-logic?text=test',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /api/ai/gpt-4-logic?text=test HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: archive.lick.eu.org\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/ai/gpt-4-logic?text=test',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'archive.lick.eu.org',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 65536,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: {
+      status: false,
+      statusCode: 400,
+      creator: '@swndyy',
+      error: 'Text and logic parameters are required.'
+    }
+  },
+  status: 400
+}
+Anti-tag command error: TypeError: Cannot read properties of undefined (reading 'undefined')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/anti-mention.js:25:47)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Blackbox command error: Request failed with status code 502
+Error in settings command: TypeError: Cannot read properties of undefined (reading 'key')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/bot-settings.js:37:44)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+  Progress: 20/256 (20✅ 0❌)  Progress: 40/256 (35✅ 5❌)ytg error: Cannot read properties of null (reading 'sendMessage')
+Error in .emix command: Cannot read properties of null (reading 'sendMessage')
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/emotions-tool.js:10:41)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/emotions-tool.js:40:41)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/emotions-tool.js:70:41)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/emotions-tool.js:99:41)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/emotions-tool.js:128:41)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/emotions-tool.js:157:41)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/emotions-tool.js:189:41)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/emotions-tool.js:218:41)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+bite error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:112:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+  Progress: 60/256 (48✅ 12❌)bully error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:122:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+blush error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:132:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+cringe error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:142:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+cry error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:152:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+cuddle error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:162:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+dance error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:172:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+hug error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:182:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+happy error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:192:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+highfive error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:202:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+kill error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:212:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+kiss error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:222:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+lick error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:232:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+poke error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:242:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+pat error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:252:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+smug error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:262:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+slap error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:272:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+smile error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:282:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+wink error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:292:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+wave error: Error: Failed to fetch GIF from API endpoint: Request failed with status code 402
+    at fetchGifFromApiEndpoint (/workspaces/Patron-2/plugins/patron/fun-reaction.js:36:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async sendReaction (/workspaces/Patron-2/plugins/patron/fun-reaction.js:82:27)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/fun-reaction.js:302:13)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+Request list error: TypeError: Cannot read properties of null (reading 'groupRequestParticipantsList')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-acceptall.js:16:46)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+  Progress: 80/256 (67✅ 13❌)[❌ ERROR] AcceptAll failed: TypeError: Cannot read properties of null (reading 'groupRequestParticipantsList')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-acceptall.js:43:34)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[❌ ERROR] RejectAll failed: TypeError: Cannot read properties of null (reading 'groupRequestParticipantsList')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-acceptall.js:81:34)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Error updating group description: TypeError: Cannot read properties of null (reading 'groupUpdateDescription')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-gdesc.js:18:29)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+[updategname] Error updating group name: TypeError: Cannot read properties of null (reading 'groupUpdateSubject')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-gname.js:18:25)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-helper.js:166:29)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Error in ginfo: TypeError: Cannot read properties of null (reading 'groupMetadata')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-info.js:30:47)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+❌ Error during mass removal: TypeError: Cannot read properties of null (reading 'decodeJid')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-kickall.js:15:46)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+❌ Error removing admins: TypeError: Cannot read properties of null (reading 'decodeJid')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-kickall.js:66:46)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Leave error: TypeError: Cannot read properties of null (reading 'decodeJid')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-leave.js:21:43)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+  Progress: 100/256 (87✅ 13❌)Poll command error: TypeError: Cannot read properties of undefined (reading 'split')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-poll.js:11:44)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+AntiLink command error: TypeError: Cannot read properties of undefined (reading 'undefined')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/group-settings.js:20:47)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/images-fun.js:15:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+  Progress: 120/256 (101✅ 19❌)TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/images-fun.js:36:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/images-fun.js:57:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/images-fun.js:78:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/images-fun.js:99:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/images-fun.js:120:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+FluxAI Error: AxiosError: Request failed with status code 500
+    at settle (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:2106:12)
+    at IncomingMessage.handleStreamEnd (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:3491:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:4731:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/imagine.js:17:30)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9) {
+  code: 'ERR_BAD_RESPONSE',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.2',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    responseType: 'arraybuffer',
+    method: 'get',
+    url: 'https://api.siputzx.my.id/api/ai/flux?prompt=test',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /api/ai/flux?prompt=test HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.2\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.siputzx.my.id\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 6,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/ai/flux?prompt=test',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 500,
+      statusMessage: 'Internal Server Error',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.siputzx.my.id/api/ai/flux?prompt=test',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 60,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.siputzx.my.id',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.siputzx.my.id/api/ai/flux?prompt=test',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.siputzx.my.id',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.siputzx.my.id',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 46369,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 2696,
+        Symbol(triggerId): 2694,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 65536,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 500,
+    statusText: 'Internal Server Error',
+    headers: Object [AxiosHeaders] {
+      date: 'Sun, 21 Dec 2025 20:22:41 GMT',
+      'content-type': 'application/json',
+      'content-length': '66',
+      connection: 'keep-alive',
+      'access-control-allow-credentials': 'true',
+      'access-control-allow-headers': 'Content-Type, Authorization',
+      'access-control-allow-methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'access-control-allow-origin': '*',
+      'access-control-expose-headers': 'host, user-agent, accept, accept-encoding, connection, cdn-loop, cf-connecting-ip, cf-ipcity, cf-ipcontinent, cf-ipcountry, cf-iplatitude, cf-iplongitude, cf-postal-code, cf-ray, cf-region, cf-region-code, cf-timezone, cf-visitor, cf-warp-tag-id, x-forwarded-for, x-forwarded-proto',
+      'permissions-policy': 'geolocation=(), microphone=(), camera=()',
+      'referrer-policy': 'same-origin',
+      'strict-transport-security': 'max-age=31536000; includeSubDomains',
+      vary: '*',
+      'x-burst-count': '0',
+      'x-content-type-options': 'nosniff',
+      'x-frame-options': 'SAMEORIGIN',
+      'x-ratelimit-endpoint': '/api/ai/flux',
+      'x-ratelimit-limit': '6',
+      'x-ratelimit-remaining': '5',
+      'x-ratelimit-reset': '1766348563',
+      'x-security-system': 'Endpoint-Rate-Limiter',
+      'x-xss-protection': '1; mode=block',
+      'cf-cache-status': 'DYNAMIC',
+      'expect-ct': 'max-age=86400, enforce',
+      'speculation-rules': '"/cdn-cgi/speculation"',
+      'report-to': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=OHG3ZBARn2sg2HRlTb5p3k7QPJuF%2B0MO30Fna%2B7WzRaCKfLPgQDufPQP1fc5FtBCsBtXtRtekFv%2FbbS7U9GHx0%2BtFurFmtv9Oq0MQsyRVKRJ"}]}',
+      nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}',
+      server: 'cloudflare',
+      'cf-ray': '9b1a17c7dd034469-BOM',
+      'alt-svc': 'h3=":443"; ma=86400'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      responseType: 'arraybuffer',
+      method: 'get',
+      url: 'https://api.siputzx.my.id/api/ai/flux?prompt=test',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /api/ai/flux?prompt=test HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.siputzx.my.id\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/ai/flux?prompt=test',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.siputzx.my.id',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 65536,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: <Buffer 7b 22 73 74 61 74 75 73 22 3a 66 61 6c 73 65 2c 22 65 72 72 6f 72 22 3a 22 46 6c 75 78 20 41 50 49 20 45 72 72 6f 72 3a 20 45 43 4f 4e 4e 52 45 46 55 ... 16 more bytes>
+  },
+  status: 500
+}
+Repo command error: Error: GitHub API error: 404
+    at Object.execute (/workspaces/Patron-2/plugins/patron/info-repo.js:27:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+  Progress: 140/256 (115✅ 25❌)  Progress: 160/256 (126✅ 34❌)NPM Command Error: TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/npm-search.js:39:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+  Progress: 180/256 (140✅ 40❌)⚠️ Cannot clear: missing key or timestamp.
+Error in patron command: TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/patron-info.js:46:25)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+TypeError: Cannot read properties of null (reading 'updateProfileName')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/privacy-menu.js:73:29)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+TypeError: Cannot read properties of null (reading 'fetchStatus')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/privacy-menu.js:90:44)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+  Progress: 200/256 (145✅ 55❌)Error fetching quote: TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/quote.js:18:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+GitHub API Error: AxiosError: Request failed with status code 404
+    at settle (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:2106:12)
+    at IncomingMessage.handleStreamEnd (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:3491:11)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:4731:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/repo-search.js:19:40)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9) {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.2',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https://api.github.com/repos/test',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /repos/test HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.2\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.github.com\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 7,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/repos/test',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'Not Found',
+      client: [TLSSocket],
+      _consuming: false,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.github.com/repos/test',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 40,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.github.com',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.github.com/repos/test',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.github.com',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.github.com',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 65210,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 3236,
+        Symbol(triggerId): 3234,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 65536,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 404,
+    statusText: 'Not Found',
+    headers: Object [AxiosHeaders] {
+      'content-type': 'application/json; charset=utf-8',
+      'x-github-media-type': 'github.v3; format=json',
+      'access-control-expose-headers': 'ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset',
+      'access-control-allow-origin': '*',
+      'strict-transport-security': 'max-age=31536000; includeSubdomains; preload',
+      'x-frame-options': 'deny',
+      'x-content-type-options': 'nosniff',
+      'x-xss-protection': '0',
+      'referrer-policy': 'origin-when-cross-origin, strict-origin-when-cross-origin',
+      'content-security-policy': "default-src 'none'",
+      vary: 'Accept-Encoding, Accept, X-Requested-With',
+      server: 'github.com',
+      date: 'Sun, 21 Dec 2025 20:22:59 GMT',
+      'x-ratelimit-limit': '60',
+      'x-ratelimit-remaining': '45',
+      'x-ratelimit-reset': '1766350687',
+      'x-ratelimit-resource': 'core',
+      'x-ratelimit-used': '15',
+      'content-length': '106',
+      'x-github-request-id': '8800:29F6C3:E5365C:12BC140:69485723'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'get',
+      url: 'https://api.github.com/repos/test',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /repos/test HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.github.com\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/repos/test',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.github.com',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 65536,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: {
+      message: 'Not Found',
+      documentation_url: 'https://docs.github.com/rest',
+      status: '404'
+    }
+  },
+  status: 404
+}
+Quotely error: TypeError: Cannot read properties of null (reading 'profilePictureUrl')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/sticker-q.js:21:44)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+Error in fetch command: TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/tool-fetch.js:12:25)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+  Progress: 220/256 (157✅ 63❌)Error in flirt command: TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/tool-fun.js:59:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+Error in truth command: TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/tool-fun.js:96:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+Error in dare command: TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/tool-fun.js:133:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+Error in pickupline command: TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/tool-fun.js:194:30)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9)
+API Error: AxiosError: Request failed with status code 404
+    at settle (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:2106:12)
+    at BrotliDecompress.handleStreamEnd (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:3491:11)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:4731:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/tool-number.js:19:34)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9) {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 10000,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.2',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https://api.vreden.my.id/api/tools/fakenumber/listnumber?id=test',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /api/tools/fakenumber/listnumber?id=test HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.2\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.vreden.my.id\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 8,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/tools/fakenumber/listnumber?id=test',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'Not Found',
+      client: [TLSSocket],
+      _consuming: true,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.vreden.my.id/api/tools/fakenumber/listnumber?id=test',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 36,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: false,
+    host: 'api.vreden.my.id',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.vreden.my.id/api/tools/fakenumber/listnumber?id=test',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.vreden.my.id',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.vreden.my.id',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 72821,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 4340,
+        Symbol(triggerId): 4338,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 65536,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 404,
+    statusText: 'Not Found',
+    headers: Object [AxiosHeaders] {
+      date: 'Sun, 21 Dec 2025 20:23:07 GMT',
+      'content-type': 'application/json; charset=utf-8',
+      'transfer-encoding': 'chunked',
+      connection: 'keep-alive',
+      server: 'cloudflare',
+      'report-to': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=YHWPCicTkn0j2zsGA1ohb65l%2B4zEUmdJa6YRgyBvQf3n6%2FTuU4WyyHjwV19ngmk5LTgHeMAr7TV1K1TmkQ9ZYSXsOQmqFXlam%2F5ZTd7KMqE%3D"}]}',
+      nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}',
+      'hosting-server': 'VredenCloud',
+      'hosting-region': 'vr-eu-north-1',
+      'hosting-cluster': 'gamma-london-1a',
+      'x-vreden-host': 'api.vreden.my.id',
+      'x-vreden-node': 'node-gb',
+      'x-vreden-id': 'VRDN20251221212307423415',
+      etag: 'W/"63-eHy/MGl+R+7driNoBn07yiaXpAk"',
+      'cf-cache-status': 'DYNAMIC',
+      'cf-ray': '9b1a186afc70404f-BOM',
+      'alt-svc': 'h3=":443"; ma=86400'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 10000,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'get',
+      url: 'https://api.vreden.my.id/api/tools/fakenumber/listnumber?id=test',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /api/tools/fakenumber/listnumber?id=test HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.vreden.my.id\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/tools/fakenumber/listnumber?id=test',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'api.vreden.my.id',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 65536,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: {
+      status: false,
+      status_code: 404,
+      message: 'Endpoint tidak ditemukan didalam server'
+    }
+  },
+  status: 404
+}
+TEMP LIST ERROR: AxiosError: Request failed with status code 404
+    at settle (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:2106:12)
+    at BrotliDecompress.handleStreamEnd (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:3491:11)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/workspaces/Patron-2/node_modules/axios/dist/node/axios.cjs:4731:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Object.execute (/workspaces/Patron-2/plugins/patron/tool-number.js:62:34)
+    at async /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:17
+    at async testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:145:9)
+    at async main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:9) {
+  code: 'ERR_BAD_REQUEST',
+  config: {
+    transitional: {
+      silentJSONParsing: true,
+      forcedJSONParsing: true,
+      clarifyTimeoutError: false
+    },
+    adapter: [ 'xhr', 'http', 'fetch' ],
+    transformRequest: [ [Function: transformRequest] ],
+    transformResponse: [ [Function: transformResponse] ],
+    timeout: 0,
+    xsrfCookieName: 'XSRF-TOKEN',
+    xsrfHeaderName: 'X-XSRF-TOKEN',
+    maxContentLength: -1,
+    maxBodyLength: -1,
+    env: { FormData: [Function], Blob: [class Blob] },
+    validateStatus: [Function: validateStatus],
+    headers: Object [AxiosHeaders] {
+      Accept: 'application/json, text/plain, */*',
+      'Content-Type': undefined,
+      'User-Agent': 'axios/1.13.2',
+      'Accept-Encoding': 'gzip, compress, deflate, br'
+    },
+    method: 'get',
+    url: 'https://api.vreden.my.id/api/tools/fakenumber/country',
+    allowAbsoluteUrls: true,
+    data: undefined
+  },
+  request: <ref *1> ClientRequest {
+    _events: [Object: null prototype] {
+      abort: [Function (anonymous)],
+      aborted: [Function (anonymous)],
+      connect: [Function (anonymous)],
+      error: [Function (anonymous)],
+      socket: [Function (anonymous)],
+      timeout: [Function (anonymous)],
+      finish: [Function: requestOnFinish]
+    },
+    _eventsCount: 7,
+    _maxListeners: undefined,
+    outputData: [],
+    outputSize: 0,
+    writable: true,
+    destroyed: true,
+    _last: true,
+    chunkedEncoding: false,
+    shouldKeepAlive: true,
+    maxRequestsOnConnectionReached: false,
+    _defaultKeepAlive: true,
+    useChunkedEncodingByDefault: false,
+    sendDate: false,
+    _removedConnection: false,
+    _removedContLen: false,
+    _removedTE: false,
+    strictContentLength: false,
+    _contentLength: 0,
+    _hasBody: true,
+    _trailer: '',
+    finished: true,
+    _headerSent: true,
+    _closed: true,
+    _header: 'GET /api/tools/fakenumber/country HTTP/1.1\r\n' +
+      'Accept: application/json, text/plain, */*\r\n' +
+      'User-Agent: axios/1.13.2\r\n' +
+      'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+      'Host: api.vreden.my.id\r\n' +
+      'Connection: keep-alive\r\n' +
+      '\r\n',
+    _keepAliveTimeout: 0,
+    _onPendingData: [Function: nop],
+    agent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 2,
+      _maxListeners: undefined,
+      options: [Object: null prototype],
+      defaultPort: 443,
+      protocol: 'https:',
+      requests: [Object: null prototype] {},
+      sockets: [Object: null prototype],
+      freeSockets: [Object: null prototype],
+      keepAliveMsecs: 1000,
+      keepAlive: true,
+      maxSockets: Infinity,
+      maxFreeSockets: 256,
+      scheduling: 'lifo',
+      maxTotalSockets: Infinity,
+      totalSocketCount: 8,
+      agentKeepAliveTimeoutBuffer: 1000,
+      maxCachedSessions: 100,
+      _sessionCache: [Object],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false
+    },
+    socketPath: undefined,
+    method: 'GET',
+    maxHeaderSize: undefined,
+    insecureHTTPParser: undefined,
+    joinDuplicateHeaders: undefined,
+    path: '/api/tools/fakenumber/country',
+    _ended: true,
+    res: IncomingMessage {
+      _events: [Object],
+      _readableState: [ReadableState],
+      _maxListeners: undefined,
+      socket: null,
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'Not Found',
+      client: [TLSSocket],
+      _consuming: true,
+      _dumped: false,
+      req: [Circular *1],
+      _eventsCount: 4,
+      responseUrl: 'https://api.vreden.my.id/api/tools/fakenumber/country',
+      redirects: [],
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kHeaders): [Object],
+      Symbol(kHeadersCount): 36,
+      Symbol(kTrailers): null,
+      Symbol(kTrailersCount): 0
+    },
+    aborted: false,
+    timeoutCb: null,
+    upgradeOrConnect: false,
+    parser: null,
+    maxHeadersCount: null,
+    reusedSocket: true,
+    host: 'api.vreden.my.id',
+    protocol: 'https:',
+    _redirectable: Writable {
+      _events: [Object],
+      _writableState: [WritableState],
+      _maxListeners: undefined,
+      _options: [Object],
+      _ended: true,
+      _ending: true,
+      _redirectCount: 0,
+      _redirects: [],
+      _requestBodyLength: 0,
+      _requestBodyBuffers: [],
+      _eventsCount: 3,
+      _onNativeResponse: [Function (anonymous)],
+      _currentRequest: [Circular *1],
+      _currentUrl: 'https://api.vreden.my.id/api/tools/fakenumber/country',
+      _timeout: null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false
+    },
+    Symbol(shapeMode): false,
+    Symbol(kCapture): false,
+    Symbol(kBytesWritten): 0,
+    Symbol(kNeedDrain): false,
+    Symbol(corked): 0,
+    Symbol(kChunkedBuffer): [],
+    Symbol(kChunkedLength): 0,
+    Symbol(kSocket): TLSSocket {
+      _tlsOptions: [Object],
+      _secureEstablished: true,
+      _securePending: false,
+      _newSessionPending: false,
+      _controlReleased: true,
+      secureConnecting: false,
+      _SNICallback: null,
+      servername: 'api.vreden.my.id',
+      alpnProtocol: false,
+      authorized: true,
+      authorizationError: null,
+      encrypted: true,
+      _events: [Object: null prototype],
+      _eventsCount: 9,
+      connecting: false,
+      _hadError: false,
+      _parent: null,
+      _host: 'api.vreden.my.id',
+      _closeAfterHandlingError: false,
+      _readableState: [ReadableState],
+      _writableState: [WritableState],
+      allowHalfOpen: false,
+      _maxListeners: undefined,
+      _sockname: null,
+      _pendingData: null,
+      _pendingEncoding: '',
+      server: undefined,
+      _server: null,
+      ssl: [TLSWrap],
+      _requestCert: true,
+      _rejectUnauthorized: true,
+      timeout: 5000,
+      parser: null,
+      _httpMessage: null,
+      autoSelectFamilyAttemptedAddresses: [Array],
+      Symbol(alpncallback): null,
+      Symbol(res): [TLSWrap],
+      Symbol(verified): true,
+      Symbol(pendingSession): null,
+      Symbol(async_id_symbol): -1,
+      Symbol(kHandle): [TLSWrap],
+      Symbol(lastWriteQueueSize): 0,
+      Symbol(timeout): Timeout {
+        _idleTimeout: 5000,
+        _idlePrev: [TimersList],
+        _idleNext: [Timeout],
+        _idleStart: 73102,
+        _onTimeout: [Function: bound ],
+        _timerArgs: undefined,
+        _repeat: null,
+        _destroyed: false,
+        Symbol(refed): false,
+        Symbol(kHasPrimitive): false,
+        Symbol(asyncId): 4366,
+        Symbol(triggerId): 4364,
+        Symbol(kAsyncContextFrame): undefined
+      },
+      Symbol(kBuffer): null,
+      Symbol(kBufferCb): null,
+      Symbol(kBufferGen): null,
+      Symbol(shapeMode): true,
+      Symbol(kCapture): false,
+      Symbol(kSetNoDelay): false,
+      Symbol(kSetKeepAlive): true,
+      Symbol(kSetKeepAliveInitialDelay): 1,
+      Symbol(kBytesRead): 0,
+      Symbol(kBytesWritten): 0,
+      Symbol(connect-options): [Object]
+    },
+    Symbol(kOutHeaders): [Object: null prototype] {
+      accept: [Array],
+      'user-agent': [Array],
+      'accept-encoding': [Array],
+      host: [Array]
+    },
+    Symbol(errored): null,
+    Symbol(kHighWaterMark): 65536,
+    Symbol(kRejectNonStandardBodyWrites): false,
+    Symbol(kUniqueHeaders): null
+  },
+  response: {
+    status: 404,
+    statusText: 'Not Found',
+    headers: Object [AxiosHeaders] {
+      date: 'Sun, 21 Dec 2025 20:23:07 GMT',
+      'content-type': 'application/json; charset=utf-8',
+      'transfer-encoding': 'chunked',
+      connection: 'keep-alive',
+      server: 'cloudflare',
+      'report-to': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=tgINfMSY2UhcquEPDoJUaD2EuuUhgWx9uD%2Fm0bTCqq9qLtvHcetgNWfpnA5rJi8N%2BIo74emUpbr8WsO9bfNJvHP5fFAn923YPNsv51qs8TU%3D"}]}',
+      nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}',
+      'hosting-server': 'VredenCloud',
+      'hosting-region': 'vr-eu-north-1',
+      'hosting-cluster': 'gamma-london-1a',
+      'x-vreden-host': 'api.vreden.my.id',
+      'x-vreden-node': 'node-gb',
+      'x-vreden-id': 'VRDN20251221212307423416',
+      etag: 'W/"63-eHy/MGl+R+7driNoBn07yiaXpAk"',
+      'cf-cache-status': 'DYNAMIC',
+      'cf-ray': '9b1a186ffded404f-BOM',
+      'alt-svc': 'h3=":443"; ma=86400'
+    },
+    config: {
+      transitional: [Object],
+      adapter: [Array],
+      transformRequest: [Array],
+      transformResponse: [Array],
+      timeout: 0,
+      xsrfCookieName: 'XSRF-TOKEN',
+      xsrfHeaderName: 'X-XSRF-TOKEN',
+      maxContentLength: -1,
+      maxBodyLength: -1,
+      env: [Object],
+      validateStatus: [Function: validateStatus],
+      headers: [Object [AxiosHeaders]],
+      method: 'get',
+      url: 'https://api.vreden.my.id/api/tools/fakenumber/country',
+      allowAbsoluteUrls: true,
+      data: undefined
+    },
+    request: <ref *1> ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 7,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: true,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      _header: 'GET /api/tools/fakenumber/country HTTP/1.1\r\n' +
+        'Accept: application/json, text/plain, */*\r\n' +
+        'User-Agent: axios/1.13.2\r\n' +
+        'Accept-Encoding: gzip, compress, deflate, br\r\n' +
+        'Host: api.vreden.my.id\r\n' +
+        'Connection: keep-alive\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/tools/fakenumber/country',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: true,
+      host: 'api.vreden.my.id',
+      protocol: 'https:',
+      _redirectable: [Writable],
+      Symbol(shapeMode): false,
+      Symbol(kCapture): false,
+      Symbol(kBytesWritten): 0,
+      Symbol(kNeedDrain): false,
+      Symbol(corked): 0,
+      Symbol(kChunkedBuffer): [],
+      Symbol(kChunkedLength): 0,
+      Symbol(kSocket): [TLSSocket],
+      Symbol(kOutHeaders): [Object: null prototype],
+      Symbol(errored): null,
+      Symbol(kHighWaterMark): 65536,
+      Symbol(kRejectNonStandardBodyWrites): false,
+      Symbol(kUniqueHeaders): null
+    },
+    data: {
+      status: false,
+      status_code: 404,
+      message: 'Endpoint tidak ditemukan didalam server'
+    }
+  },
+  status: 404
+}
+error [REPORT COMMAND ERROR]: TypeError: Cannot read properties of null (reading 'sendMessage')
+    at Object.execute (/workspaces/Patron-2/plugins/patron/tool-report.js:27:30)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+Error processing media: TypeError: message.reply is not a function
+    at Object.execute (/workspaces/Patron-2/plugins/patron/tool-vv2.js:13:32)
+    at /workspaces/Patron-2/.tools/test_all_commands_fast.js:135:30
+    at testCommand (/workspaces/Patron-2/.tools/test_all_commands_fast.js:143:11)
+    at main (/workspaces/Patron-2/.tools/test_all_commands_fast.js:194:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+translate fallback: translate plugin: message.reply is not a function
+/workspaces/Patron-2/plugins/patron/tool-pdf.js:25
+                    await client.sendMessage(chatId, {
+                                 ^
+
+TypeError: Cannot read properties of null (reading 'sendMessage')
+    at PDFDocument.<anonymous> (/workspaces/Patron-2/plugins/patron/tool-pdf.js:25:34)
+    at PDFDocument.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+
+Node.js v24.11.1

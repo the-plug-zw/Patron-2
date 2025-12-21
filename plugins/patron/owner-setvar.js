@@ -50,12 +50,18 @@ module.exports = [
         description: 'Set environment variable (Heroku only)',
         category: 'External',
         owner: true,
-        execute: async (message, { text }) => {
-            const [key, ...valueParts] = text.split('=');
+        execute: async (message, { text, reply: reply2 }) => {
+            // Add reply method if not available
+            if (!message.reply && typeof reply2 === 'function') {
+                message.reply = reply2;
+            }
+
+            const [key, ...valueParts] = text ? text.split('=') : [];
             const value = valueParts.join('=').trim();
 
             if (!key || !value) {
-                return message.reply('Usage: setvar KEY=value');
+                if (message.reply) return message.reply('Usage: setvar KEY=value');
+                return;
             }
 
             if (!HEROKU_API_KEY || !HEROKU_APP_NAME) {

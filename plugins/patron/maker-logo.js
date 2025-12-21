@@ -1,4 +1,9 @@
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
+// Ensure global.log exists (fallback if not defined globally)
+if (typeof global.log !== 'function') {
+    global.log = (level, msg) => console.log(`[${level}]`, msg);
+}
 
 module.exports = [
     {
@@ -10,7 +15,7 @@ module.exports = [
         execute: async (message, { ednut, uploadImage, reply }) => {
             try {
                 if (!message.quoted) return reply('Reply to an image or someone\'s message to create a wanted poster.');
-                
+
                 let imageBuffer;
                 if (message.quoted && message.quoted.mtype === 'imageMessage') {
                     imageBuffer = await ednut.downloadMediaMessage(message.quoted);
@@ -21,7 +26,7 @@ module.exports = [
                     imageBuffer = await response.arrayBuffer();
                     imageBuffer = Buffer.from(imageBuffer);
                 }
-                
+
                 let uploadedUrl = await uploadImage(imageBuffer);
                 let apiUrl = 'https://api.popcat.xyz/v2/wanted?image=' + uploadedUrl;
                 await ednut.sendMessage(message.chat, { image: { url: apiUrl }, caption: '' + global.footer }, { quoted: message });
@@ -39,7 +44,7 @@ module.exports = [
         execute: async (message, { ednut, uploadImage, reply }) => {
             try {
                 if (!message.quoted) return reply('Reply to an image or someone\'s message to create a jail poster.');
-                
+
                 let imageBuffer;
                 if (message.quoted && message.quoted.mtype === 'imageMessage') {
                     imageBuffer = await ednut.downloadMediaMessage(message.quoted);
@@ -50,7 +55,7 @@ module.exports = [
                     imageBuffer = await response.arrayBuffer();
                     imageBuffer = Buffer.from(imageBuffer);
                 }
-                
+
                 let uploadedUrl = await uploadImage(imageBuffer);
                 let apiUrl = 'https://api.popcat.xyz/v2/jail?image=' + uploadedUrl;
                 await ednut.sendMessage(message.chat, { image: { url: apiUrl }, caption: '' + global.footer }, { quoted: message });
@@ -68,7 +73,7 @@ module.exports = [
         execute: async (message, { ednut, uploadImage, reply }) => {
             try {
                 if (!message.quoted) return reply('Reply to an image or someone\'s message to create a nokia poster.');
-                
+
                 let imageBuffer;
                 if (message.quoted && message.quoted.mtype === 'imageMessage') {
                     imageBuffer = await ednut.downloadMediaMessage(message.quoted);
@@ -79,7 +84,7 @@ module.exports = [
                     imageBuffer = await response.arrayBuffer();
                     imageBuffer = Buffer.from(imageBuffer);
                 }
-                
+
                 let uploadedUrl = await uploadImage(imageBuffer);
                 let apiUrl = 'https://api.popcat.xyz/v2/nokia?image=' + uploadedUrl;
                 await ednut.sendMessage(message.chat, { image: { url: apiUrl }, caption: '' + global.footer }, { quoted: message });
@@ -97,7 +102,7 @@ module.exports = [
         execute: async (message, { ednut, uploadImage, reply }) => {
             try {
                 if (!message.quoted) return reply('Reply to an image or someone\'s message to create a gun poster.');
-                
+
                 let imageBuffer;
                 let textArgs = message.text.split(' ').slice(1).join(' ');
                 if (message.quoted && message.quoted.mtype === 'imageMessage') {
@@ -109,7 +114,7 @@ module.exports = [
                     imageBuffer = await response.arrayBuffer();
                     imageBuffer = Buffer.from(imageBuffer);
                 }
-                
+
                 let uploadedUrl = await uploadImage(imageBuffer);
                 let apiUrl = 'https://api.popcat.xyz/v2/gun?image=' + uploadedUrl;
                 await ednut.sendMessage(message.chat, { image: { url: apiUrl }, caption: '' + global.footer }, { quoted: message });
@@ -127,7 +132,7 @@ module.exports = [
         execute: async (message, { ednut, uploadImage, reply }) => {
             try {
                 if (!message.quoted) return reply('Reply to an image or someone\'s message to create an ad.');
-                
+
                 let imageBuffer;
                 if (message.quoted && message.quoted.mtype === 'imageMessage') {
                     imageBuffer = await ednut.downloadMediaMessage(message.quoted);
@@ -138,7 +143,7 @@ module.exports = [
                     imageBuffer = await response.arrayBuffer();
                     imageBuffer = Buffer.from(imageBuffer);
                 }
-                
+
                 let uploadedUrl = await uploadImage(imageBuffer);
                 let apiUrl = 'https://api.popcat.xyz/v2/ad?image=' + uploadedUrl;
                 await ednut.sendMessage(message.chat, { image: { url: apiUrl }, caption: '' + global.footer }, { quoted: message });
@@ -156,7 +161,7 @@ module.exports = [
         execute: async (message, { ednut, uploadImage, reply }) => {
             try {
                 if (!message.quoted) return reply('Reply to an image or someone\'s message to create a blur image.');
-                
+
                 let imageBuffer;
                 if (message.quoted && message.quoted.mtype === 'imageMessage') {
                     imageBuffer = await ednut.downloadMediaMessage(message.quoted);
@@ -167,7 +172,7 @@ module.exports = [
                     imageBuffer = await response.arrayBuffer();
                     imageBuffer = Buffer.from(imageBuffer);
                 }
-                
+
                 let uploadedUrl = await uploadImage(imageBuffer);
                 let apiUrl = 'https://api.popcat.xyz/v2/blur?image=' + uploadedUrl;
                 await ednut.sendMessage(message.chat, { image: { url: apiUrl }, caption: '' + global.footer }, { quoted: message });
@@ -185,7 +190,7 @@ module.exports = [
         execute: async (message, { ednut, uploadImage, reply }) => {
             try {
                 if (!message.quoted) return reply('Reply to an image or someone\'s message to create an invert image.');
-                
+
                 let imageBuffer;
                 if (message.quoted && message.quoted.mtype === 'imageMessage') {
                     imageBuffer = await ednut.downloadMediaMessage(message.quoted);
@@ -196,7 +201,7 @@ module.exports = [
                     imageBuffer = await response.arrayBuffer();
                     imageBuffer = Buffer.from(imageBuffer);
                 }
-                
+
                 let uploadedUrl = await uploadImage(imageBuffer);
                 let apiUrl = 'https://api.popcat.xyz/v2/invert?image=' + uploadedUrl;
                 await ednut.sendMessage(message.chat, { image: { url: apiUrl }, caption: '' + global.footer }, { quoted: message });
@@ -214,7 +219,7 @@ module.exports = [
         execute: async (message, { ednut, uploadImage, reply }) => {
             try {
                 if (!message.quoted) return reply('Reply to an image or someone\'s message to create an M&M\'s image.');
-                
+
                 let imageBuffer;
                 if (message.quoted && message.quoted.mtype === 'imageMessage') {
                     imageBuffer = await ednut.downloadMediaMessage(message.quoted);
@@ -225,7 +230,7 @@ module.exports = [
                     imageBuffer = await response.arrayBuffer();
                     imageBuffer = Buffer.from(imageBuffer);
                 }
-                
+
                 let uploadedUrl = await uploadImage(imageBuffer);
                 let apiUrl = 'https://api.popcat.xyz/v2/mnm?image=' + uploadedUrl;
                 await ednut.sendMessage(message.chat, { image: { url: apiUrl }, caption: '' + global.footer }, { quoted: message });
@@ -244,7 +249,7 @@ module.exports = [
             try {
                 let text = message.text.split(' ').slice(1).join(' ');
                 if (!text) return reply('Please provide a text');
-                
+
                 let apiUrl = 'https://api.popcat.xyz/v2/caution?text=' + text;
                 await ednut.sendMessage(message.chat, { image: { url: apiUrl }, caption: '' + global.footer, quoted: message });
             } catch (error) {

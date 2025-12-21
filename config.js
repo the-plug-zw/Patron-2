@@ -1,17 +1,17 @@
 
 const chalk = require("chalk")
 const fs = require("fs")
-require('dotenv').config(); 
+require('dotenv').config();
 
 //================= { SETTINGS } =================\\
 global.prefix = (process.env.PREFIX || ".").trim().split(/\s+/);
 // your desired prefix symbol only
 global.owner = process.env.OWNER_NUMBER || "263781564004"; // owner number , for multiple number
-global.sudo = process.env.SUDO  || "";
+global.sudo = process.env.SUDO || "";
 global.ownername = process.env.OWNER_NAME || "🎩-Hxcker-263-🎩"; //set bot owner name here 
 global.botname = process.env.BOT_NAME || "🎩-Zed-Bot-🎩"
-global.author = process.env.AUTHOR  || "Hxcker-263";
-global.packname = process.env.PACK_NAME  || "🎩-Hxcker-263-🎩";
+global.author = process.env.AUTHOR || "Hxcker-263";
+global.packname = process.env.PACK_NAME || "🎩-Hxcker-263-🎩";
 global.session = process.env.SESSION_ID || "Zed-Bot~965e89d10e82d89e9997b95302733738"
 // Backwards-compatible: `main.js` expects `global.sessionId`
 global.sessionId = process.env.SESSION_ID || process.env.SESSION || global.session || "Zed-Bot~965e89d10e82d89e9997b95302733738"
@@ -20,7 +20,7 @@ global.simbol = process.env.SYMBOL || '🚹';
 global.thumb = process.env.THUMB || "https://files.catbox.moe/e71nan.png"
 global.footer = process.env.FOOTER || '';
 global.warn = process.env.WARN || '4'
-global.menutype = process.env.MENU_TYPE || ''
+global.menutype = process.env.MENU_TYPE || '2'
 global.scan = 'https://Zed-Bot.vercel.app'
 
 

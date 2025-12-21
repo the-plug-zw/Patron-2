@@ -6,6 +6,14 @@ module.exports = [
     category: 'Fun',
     filename: __filename,
     async execute(message, { ednut, reply, from }) {
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
       try {
         const sentMessage = await ednut.sendMessage(from, { 'text': '😂' });
         const happyEmojis = [
@@ -13,7 +21,7 @@ module.exports = [
           '😃', '😄', '😁', '😊', '😎', '🥳', '😸', '😹', '🌞', '🌈',
           '😃', '😄', '😁', '😊'
         ];
-        
+
         for (const emoji of happyEmojis) {
           await new Promise(resolve => setTimeout(resolve, 1000));
           await ednut.relayMessage(from, {
@@ -36,6 +44,14 @@ module.exports = [
     category: 'Fun',
     filename: __filename,
     async execute(message, { ednut, reply, from }) {
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
       try {
         const sentMessage = await ednut.sendMessage(from, { 'text': '🧡' });
         const heartEmojis = [
@@ -43,7 +59,7 @@ module.exports = [
           '💝🩶', '🤍', '🤎', '❤️‍🔥', '💞', '💓', '💘', '💝', '♥️', '💟',
           '❤️‍🩹', '❤️'
         ];
-        
+
         for (const emoji of heartEmojis) {
           await new Promise(resolve => setTimeout(resolve, 1000));
           await ednut.relayMessage(from, {
@@ -66,13 +82,17 @@ module.exports = [
     category: 'Fun',
     filename: __filename,
     async execute(message, { ednut, reply, from }) {
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
       try {
         const sentMessage = await ednut.sendMessage(from, { 'text': '👽' });
         const angryEmojis = [
           '😡', '😠', '🤬', '😤', '😾',
           '😡', '😠', '🤬', '😤', '😾'
         ];
-        
+
         for (const emoji of angryEmojis) {
           await new Promise(resolve => setTimeout(resolve, 1000));
           await ednut.relayMessage(from, {
@@ -95,13 +115,17 @@ module.exports = [
     category: 'Fun',
     filename: __filename,
     async execute(message, { ednut, reply, from }) {
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
       try {
         const sentMessage = await ednut.sendMessage(from, { 'text': '😔' });
         const sadEmojis = [
           '🥺', '😟', '😕', '😖', '😫', '🙁', '😩', '😥', '😓', '😪',
           '😢', '😔', '😞', '😭', '💔', '😭', '😿'
         ];
-        
+
         for (const emoji of sadEmojis) {
           await new Promise(resolve => setTimeout(resolve, 1000));
           await ednut.relayMessage(from, {
@@ -124,13 +148,17 @@ module.exports = [
     category: 'Fun',
     filename: __filename,
     async execute(message, { ednut, reply, from }) {
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
       try {
         const sentMessage = await ednut.sendMessage(from, { 'text': '🧐' });
         const shyEmojis = [
           '😳', '😊', '😶', '🙈', '🙊',
           '😳', '😊', '😶', '🙈', '🙊'
         ];
-        
+
         for (const emoji of shyEmojis) {
           await new Promise(resolve => setTimeout(resolve, 1000));
           await ednut.relayMessage(from, {
@@ -153,6 +181,10 @@ module.exports = [
     category: 'Fun',
     filename: __filename,
     async execute(message, { ednut, reply, from }) {
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
       try {
         const sentMessage = await ednut.sendMessage(from, { 'text': '🌝' });
         const moonEmojis = [
@@ -162,7 +194,7 @@ module.exports = [
           '🌗', '🌘', '🌑', '🌒', '🌓', '🌔', '🌕', '🌖',
           '🌝🌚'
         ];
-        
+
         for (const emoji of moonEmojis) {
           await new Promise(resolve => setTimeout(resolve, 1000));
           await ednut.relayMessage(from, {
@@ -185,13 +217,17 @@ module.exports = [
     category: 'Fun',
     filename: __filename,
     async execute(message, { ednut, reply, from }) {
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
       try {
         const sentMessage = await ednut.sendMessage(from, { 'text': '🤔' });
         const confusedEmojis = [
           '😕', '😟', '😵', '🤔', '😖', '😲', '😦', '🤷',
           '🤷‍♀️', '🤷‍♂️'
         ];
-        
+
         for (const emoji of confusedEmojis) {
           await new Promise(resolve => setTimeout(resolve, 1000));
           await ednut.relayMessage(from, {
@@ -214,13 +250,17 @@ module.exports = [
     category: 'Fun',
     filename: __filename,
     async execute(message, { ednut, reply, from }) {
+      // Safety check for ednut
+      if (!ednut || typeof ednut.sendMessage !== 'function') {
+        return;
+      }
       try {
         const sentMessage = await ednut.sendMessage(from, { 'text': '💋' });
         const hotEmojis = [
           '🥵', '❤️', '💋', '😫', '🤤', '😋', '🥵', '🥶',
           '🙊', '😻', '🙈', '💋', '🫂', '🫀', '👅', '👄', '💋'
         ];
-        
+
         for (const emoji of hotEmojis) {
           await new Promise(resolve => setTimeout(resolve, 1000));
           await ednut.relayMessage(from, {

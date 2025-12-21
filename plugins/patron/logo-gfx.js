@@ -1,4 +1,9 @@
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
+// Ensure global.log exists (fallback if not defined globally)
+if (typeof global.log !== 'function') {
+    global.log = (level, msg) => console.log(`[${level}]`, msg);
+}
 
 module.exports = [
     {

@@ -231,13 +231,21 @@ exports.smsg = (ptz = {}, m = null, store = null) => {
     // 🧩 Message type/content
     let mtype = "unknown";
     try {
-      if (m.message) mtype = getContentType(m.message) || "unknown";
-    } catch {}
+      if (m.message && typeof m.message === 'object') mtype = getContentType(m.message) || "unknown";
+    } catch { }
     m.mtype = mtype;
-    m.msg =
-      mtype === "viewOnceMessage"
-        ? m.message[mtype]?.message?.[getContentType(m.message[mtype]?.message || {})]
-        : m.message[mtype];
+
+    let msgContent = m.message?.[mtype];
+    if (mtype === "viewOnceMessage" && msgContent?.message) {
+      try {
+        const innerType = getContentType(msgContent.message || {});
+        m.msg = msgContent.message?.[innerType];
+      } catch {
+        m.msg = msgContent;
+      }
+    } else {
+      m.msg = msgContent;
+    }
 
     // 🧩 Extract body/text fast
     m.body =
