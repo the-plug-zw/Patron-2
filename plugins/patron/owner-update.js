@@ -61,27 +61,27 @@ module.exports = {
         }
         
         try {
-            await reply(formatMessage('Checking PATRON-MD', '🔍'));
+            await reply(formatMessage('Checking Zed-Bot', '🔍'));
             
-            const { data: commitData } = await axios.get('https://api.github.com/repos/Itzpatron/PATRON-MD3/commits/main');
+            const { data: commitData } = await axios.get('https://api.github.com/repos/hacker263/Zed-Bot3/commits/main');
             const currentHash = await getCurrentHash();
             
             if (currentHash === commitData.sha) {
                 return reply(formatMessage('Already latest version', '✅'));
             }
             
-            await reply(formatMessage('Updating PATRON-MD', '⚡'));
+            await reply(formatMessage('Updating Zed-Bot', '⚡'));
             
             const botDir = path.join(__dirname, '..', '..');
             const zipPath = path.join(botDir, 'update_temp.zip');
             const extractPath = path.join(botDir, 'temp_update');
             
-            fs.writeFileSync(zipPath, (await axios.get('https://github.com/Itzpatron/PATRON-MD3/archive/main.zip', {
+            fs.writeFileSync(zipPath, (await axios.get('https://github.com/hacker263/Zed-Bot3/archive/main.zip', {
                 'responseType': 'arraybuffer'
             })).data);
             
             new AdmZip(zipPath).extractAllTo(extractPath, true);
-            copyFolderSync(path.join(extractPath, 'PATRON-MD3-main'), botDir);
+            copyFolderSync(path.join(extractPath, 'Zed-Bot3-main'), botDir);
             
             await updateHash(commitData.sha);
             fs.unlinkSync(zipPath);

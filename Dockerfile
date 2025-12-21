@@ -1,7 +1,7 @@
 FROM node:lts-buster
 
 # Clone the correct repository
-RUN git clone https://github.com/Itzpatron/PATRON-MD3.git /root/Patron
+RUN git clone https://github.com/hacker263/Zed-Bot3.git /root/Patron
 
 # Set working directory
 WORKDIR /root/Patron

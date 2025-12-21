@@ -1,7 +1,7 @@
 # 𝗣𝗔𝗧𝗥𝗢𝗡-𝗠𝗗 𝗕𝗢𝗧
 
 <p align="center">
-  <img src="https://files.catbox.moe/e71nan.png" height="300" alt="PATRON-MD Logo" />
+  <img src="https://files.catbox.moe/e71nan.png" height="300" alt="Zed-Bot Logo" />
 </p>
 
 <p align="center">
@@ -9,25 +9,25 @@
 </p>
 
 <div align="center">
-  <a href="https://github.com/Itzpatron/followers">
-    <img title="Followers" src="https://img.shields.io/github/followers/Itzpatron?color=EB5406&style=for-the-badge&logo=github&logoColor=white">
+  <a href="https://github.com/hacker263/followers">
+    <img title="Followers" src="https://img.shields.io/github/followers/hacker263?color=EB5406&style=for-the-badge&logo=github&logoColor=white">
   </a>
-  <a href="https://github.com/Itzpatron/PATRON-MD3/stargazers/">
-    <img title="Stars" src="https://img.shields.io/github/stars/Itzpatron/PATRON-MD3?color=FFCE44&style=for-the-badge&logo=reverbnation&logoColor=white">
+  <a href="https://github.com/hacker263/Zed-Bot3/stargazers/">
+    <img title="Stars" src="https://img.shields.io/github/stars/hacker263/Zed-Bot3?color=FFCE44&style=for-the-badge&logo=reverbnation&logoColor=white">
   </a>
-  <a href="https://github.com/Itzpatron/PATRON-MD3/network/members">
-    <img title="Forks" src="https://img.shields.io/github/forks/Itzpatron/PATRON-MD3?color=FF007F&style=for-the-badge&logo=git&logoColor=white">
+  <a href="https://github.com/hacker263/Zed-Bot3/network/members">
+    <img title="Forks" src="https://img.shields.io/github/forks/hacker263/Zed-Bot3?color=FF007F&style=for-the-badge&logo=git&logoColor=white">
   </a>
-  <a href="https://github.com/Itzpatron/PATRON-MD3/">
-    <img title="Repo Size" src="https://img.shields.io/github/repo-size/Itzpatron/PATRON-MD3?style=for-the-badge&color=FFFF33&logo=docusign&logoColor=white">
+  <a href="https://github.com/hacker263/Zed-Bot3/">
+    <img title="Repo Size" src="https://img.shields.io/github/repo-size/hacker263/Zed-Bot3?style=for-the-badge&color=FFFF33&logo=docusign&logoColor=white">
   </a>
-  <a href="https://github.com/Itzpatron/PATRON-MD3/graphs/commit-activity">
+  <a href="https://github.com/hacker263/Zed-Bot3/graphs/commit-activity">
     <img height="28" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge&logo=gitpod&logoColor=white">
   </a>
 </div>
 
 <p align="center">
-  <img src="https://profile-counter.glitch.me/PATRON-MD3/count.svg" alt="Visitor Count" />
+  <img src="https://profile-counter.glitch.me/Zed-Bot3/count.svg" alt="Visitor Count" />
 </p>
 
 ---
@@ -52,7 +52,7 @@
 
 ### ✅ First: Star and Fork the Repo
 
-<a href='https://github.com/Itzpatron/PATRON-MD3/fork' target="_blank">
+<a href='https://github.com/hacker263/Zed-Bot3/fork' target="_blank">
   <img src='https://img.shields.io/badge/FORK_REPOSITORY-008000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000'/>
 </a>
 
@@ -61,12 +61,12 @@
 ### 🔗 Pairing Links
 
 > **PAIRING LINK (01)**  
-<a href='https://patron-md.vercel.app' target="_blank">
+<a href='https://Zed-Bot.vercel.app' target="_blank">
   <img src='https://img.shields.io/badge/PAIR_CODE_1-00FFFF?style=for-the-badge&logo=matrix&logoColor=white&labelColor=000000'/>
 </a>
 
 > **PAIRING LINK (02)**  
-<a href='https://patron-md.vercel.app' target="_blank">
+<a href='https://Zed-Bot.vercel.app' target="_blank">
   <img src='https://img.shields.io/badge/PAIR_CODE_2-FF00FF?style=for-the-badge&logo=matrix&logoColor=white&labelColor=000000'/>
 </a>
 
@@ -74,12 +74,12 @@
 
 ## ⚙️ Deployment Options
 
-<a href='https://patron-md.vercel.app/deploy-md3' target="_blank">
+<a href='https://Zed-Bot.vercel.app/deploy-md3' target="_blank">
   <img src='https://img.shields.io/badge/DEPLOYMENT_GUIDE-FF00FF?style=for-the-badge&logo=matrix&logoColor=white&labelColor=000000'/>
 </a>
 
 👉 **If you want a panel to manage your bot easily**, check out this page:  
-🔗 [https://patron-md.vercel.app/deploy-md3](https://patron-md.vercel.app/deploy-md3)
+🔗 [https://Zed-Bot.vercel.app/deploy-md3](https://Zed-Bot.vercel.app/deploy-md3)
 
 <details>
 <summary><b>📲 Deploy on Termux (Manual Method)</b></summary>
@@ -87,8 +87,8 @@
 ```bash
 apt update && apt upgrade
 pkg install nodejs git
-git clone https://github.com/Itzpatron/PATRON-MD3
-cd PATRON-MD3
+git clone https://github.com/hacker263/Zed-Bot3
+cd Zed-Bot3
 npm install
 npm start
 ```

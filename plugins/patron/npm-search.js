@@ -26,7 +26,7 @@ module.exports = [{
             const repositoryUrl = packageData.repository?.url || 'Not available';
 
             const messageText = `
-*PATRON-MD NPM SEARCH*
+*Zed-Bot NPM SEARCH*
 
 *🔰 NPM PACKAGE:* ${packageName}
 *📄 DESCRIPTION:* ${description}

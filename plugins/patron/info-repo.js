@@ -9,7 +9,7 @@ module.exports = [
     filename: __filename,
 
     async execute(m, { ednut, reply, from }) {
-        const REPO_URL = 'https://github.com/Itzpatron/PATRON-MD3';
+        const REPO_URL = 'https://github.com/hacker263/Zed-Bot3';
         const IMAGE_URL = 'https://files.catbox.moe/e71nan.png';
         const NEWSLETTER_JID = '120363303045895814@newsletter';
         const NEWSLETTER_NAME = 'ᴘᴀᴛʀᴏɴTᴇᴄʜＸ';
@@ -31,10 +31,10 @@ module.exports = [
 
             // Caption style 1 (detailed)
             const caption1 = `
-╭───『 PATRON-MD REPO 』───⳹
+╭───『 Zed-Bot REPO 』───⳹
 │ 🌐 Use this link to get session id:
-│ 👉 https://patron-md.vercel.app
-│ 🚀 Or use this bot .getpair 234xxxxxx
+│ 👉 https://Zed-Bot.vercel.app
+│ 🚀 Or use this bot .getpair 263xxxxxx
 │ 📦 Repository: ${data.name}
 │ 👑 Owner: ${data.owner.login}
 │ ⭐ Stars: ${data.stargazers_count}
@@ -44,7 +44,7 @@ module.exports = [
 │ 📝 Description:
 │ ${data.description || 'No description'}
 ╰────────────────⳹
-> © powered by patron TechX 🚹
+> *© powered by 🎩-Hxcker-263-🎩*
 `;
 
             // Caption style 2 (compact)
@@ -56,8 +56,8 @@ module.exports = [
 ├─ ⑂ ${data.forks_count} Forks
 ├─ 🔗 ${data.html_url}
 /fork
-•——[ *PATRON-MD* ]——•
-> © powered by patron TechX 🚹
+•——[ *Zed-Bot* ]——•
+> *© powered by 🎩-Hxcker-263-🎩*
 `;
 
             // Random caption selection

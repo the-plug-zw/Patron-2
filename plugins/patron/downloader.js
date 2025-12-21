@@ -67,7 +67,7 @@ async function downloader(platform, url, { ednut, mek, from, reply }) {
       return reply('❌ Could not retrieve download link.');
     }
 
-    const footer = '\n\n> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘᴀᴛʀᴏɴTᴇᴄʜＸ* 🚹';
+    const footer = '\n\n> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 🎩-Hxcker-263-🎩*';
 
     // Handle multiple links (for TikTok)
     if (Array.isArray(downloadLink)) {

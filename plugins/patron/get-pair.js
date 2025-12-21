@@ -29,7 +29,7 @@ module.exports = [
                 }
                 
                 const pairingCode = data.code;
-                const instruction = '```\n> *PATRON-MD PAIR COMPLETED*```';
+                const instruction = '```\n> *Zed-Bot PAIR COMPLETED*```';
                 
                 await ednut.sendMessage(message.chat, {
                     'text': instruction + '\n\n*Your pairing code is:* ' + pairingCode

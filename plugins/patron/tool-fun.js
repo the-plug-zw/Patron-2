@@ -162,7 +162,7 @@ module.exports = [
                     return replyFunc('❌ Failed to fetch a fun fact. Please try again.');
                 }
                 
-                const factMessage = '🧠 *Random Fun Fact* 🧠\n\n' + factText + '\n\nIsn\'t that interesting? 😄\n\n> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘᴀᴛʀᴏɴTᴇᴄʜＸ* 🚹';
+                const factMessage = '🧠 *Random Fun Fact* 🧠\n\n' + factText + '\n\nIsn\'t that interesting? 😄\n\n> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 🎩-Hxcker-263-🎩*';
                 return replyFunc(factMessage);
                 
             } catch (error) {

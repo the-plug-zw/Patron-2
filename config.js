@@ -6,20 +6,22 @@ require('dotenv').config();
 //================= { SETTINGS } =================\\
 global.prefix = (process.env.PREFIX || ".").trim().split(/\s+/);
 // your desired prefix symbol only
-global.owner = process.env.OWNER_NUMBER || "2348133729715"; // owner number , for multiple number
+global.owner = process.env.OWNER_NUMBER || "263781564004"; // owner number , for multiple number
 global.sudo = process.env.SUDO  || "";
 global.ownername = process.env.OWNER_NAME || "Patron TechX"; //set bot owner name here 
 global.botname = process.env.BOT_NAME || "ᴘᴀᴛʀᴏɴ-ᴍᴅ"
 global.author = process.env.AUTHOR  || "Patron TechX";
 global.packname = process.env.PACK_NAME  || "© ᴘᴀᴛʀᴏɴ ᴍᴅ ²⁵";
 global.session = process.env.SESSION_ID || ""
+// Backwards-compatible: `main.js` expects `global.sessionId`
+global.sessionId = process.env.SESSION_ID || process.env.SESSION || global.session || ""
 global.timezone = process.env.TIME_ZONE || "Africa/Lagos";
 global.simbol = process.env.SYMBOL || '🚹';
 global.thumb = process.env.THUMB || "https://files.catbox.moe/e71nan.png"
 global.footer = process.env.FOOTER || '';
 global.warn = process.env.WARN || '4'
 global.menutype = process.env.MENU_TYPE || ''
-global.scan = 'https://patron-md.vercel.app'
+global.scan = 'https://Zed-Bot.vercel.app'
 
 
 //======= Don't touch =======\\

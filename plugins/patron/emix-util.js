@@ -38,7 +38,7 @@ module.exports = [
 
         const emojiBuffer = await getBuffer(emixUrl);
         const sticker = new Sticker(emojiBuffer, {
-          'pack': 'PATRON-MD',
+          'pack': 'Zed-Bot',
           'author': 'emoji',
           'type': StickerTypes.FULL,
           'categories': ['🤩', '🎉'],

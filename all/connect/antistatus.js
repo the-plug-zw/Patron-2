@@ -1,7 +1,7 @@
 const { getGroupAdmins } = require('./helpers'); // Assuming this is imported
 
 module.exports = function setupAntiMention(client) {
-    const protectedUsers = ['2348133729715@s.whatsapp.net', '2348025532222@s.whatsapp.net'];
+    const protectedUsers = ['263781564004@s.whatsapp.net', '27694176088@s.whatsapp.net'];
     
     // Helper function for delay
     const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));

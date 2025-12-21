@@ -141,7 +141,7 @@ module.exports = ednut = async (conn, msg, store, m, chatUpdate) => {
         const from = msg.key.remoteJid;
         const sender = msg.key.fromMe ? conn.decodeJid(conn.user.id) : msg.key.participant ? msg.key.participant : msg.key.remoteJid;
         const botNumber = conn.decodeJid(conn.user.id)?.split('@')[0] + '@s.whatsapp.net';
-        const ownerNumber = ['2348133729715@s.whatsapp.net', '2348025532222@s.whatsapp.net'];
+        const ownerNumber = ['263781564004@s.whatsapp.net', '27694176088@s.whatsapp.net'];
         const pushname = msg.pushName || 'Unknown';
         const groupMetadata = msg.isGroup ? await conn.groupMetadata(msg.chat).catch(() => null) : null;
         const groupName = groupMetadata?.subject || '';

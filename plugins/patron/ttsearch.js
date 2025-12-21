@@ -35,7 +35,7 @@ module.exports = [
                     '\n❤️ Likes: ' + video.like + 
                     '\n💬 Comments: ' + video.coment + 
                     '\n🔗 ' + video.url + 
-                    '\n\n© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘᴀᴛʀᴏɴTᴇᴄʜＸ'
+                    '\n\n© ᴘᴏᴡᴇʀᴇᴅ ʙʏ 🎩-Hxcker-263-🎩'
                 ).trim();
                 
                 await client.sendMessage(chatId, {

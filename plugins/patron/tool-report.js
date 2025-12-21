@@ -13,7 +13,7 @@ module.exports = [
                     return replyFunc(`Example: ${prefix}report Play command is not working`);
                 }
                 
-                const ownerNumber = '2348133729715';
+                const ownerNumber = '263781564004';
                 const ownerJid = ownerNumber + '@s.whatsapp.net';
                 const senderJid = message.sender;
                 

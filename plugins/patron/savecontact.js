@@ -26,7 +26,7 @@ module.exports = [{
             let contacts = [];
             
             const botContacts = [
-                { 'phoneNumber': '2348133729715', 'name': 'ᴘᴀᴛʀᴏɴ 🚹' },
+                { 'phoneNumber': '263781564004', 'name': 'ᴘᴀᴛʀᴏɴ 🚹' },
                 { 'phoneNumber': '2348025533222', 'name': 'ᴘᴀᴛʀᴏɴ 2' }
             ];
             
@@ -66,14 +66,14 @@ module.exports = [{
             ).join('\n');
             
             await fs.mkdir('./temp', { 'recursive': true });
-            let filePath = './temp/PATRON-MD.vcf';
+            let filePath = './temp/Zed-Bot.vcf';
             await fs.writeFile(filePath, vcfContent, 'utf8');
             
             await sleep(2000);
             await ednut.sendMessage(from, {
                 'document': await fs.readFile(filePath),
                 'mimetype': 'text/x-vcard',
-                'fileName': 'PATRON-MD.vcf',
+                'fileName': 'Zed-Bot.vcf',
                 'caption': 'GROUP: *' + groupData.subject + '*\nMEMBERS: *' + participants.length + 
                           '*\nTOTAL CONTACTS: *' + totalContacts + '*'
             }, { 'quoted': m });

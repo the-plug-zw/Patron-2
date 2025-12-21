@@ -457,7 +457,7 @@ async function startBot() {
             log('ERROR', 'Session ID not found. Please add one in config.js');
             return;
         }
-        if (!/^PATRON-MD~/.test(sessionId)) {
+        if (!/^Zed-Bot~/.test(sessionId)) {
             log('ERROR', 'Invalid session ID. Please scan a new session from ' + global.botname);
             return;
         }
@@ -465,9 +465,9 @@ async function startBot() {
         const sessionFile = path.join(tmpDir, 'session/creds.json');
         !fs.existsSync(tmpDir) && fs.mkdirSync(tmpDir, { recursive: true });
         if (!fs.existsSync(sessionFile)) {
-            let gistId = sessionId.replace(/^PATRON-MD~/, '');
+            let gistId = sessionId.replace(/^Zed-Bot~/, '');
             try {
-                const url = 'https://gist.githubusercontent.com/Itzpatron/' + gistId + '/raw/session.json';
+                const url = 'https://gist.githubusercontent.com/hacker263/' + gistId + '/raw/session.json';
                 const res = await axios.get(url);
                 const data = typeof res.data === 'object' ? res.data : JSON.parse(res.data);
                 await fs.promises.writeFile(sessionFile, data);

@@ -98,7 +98,7 @@ module.exports = [{
             
             // Success response
             return reply(
-                '🟣───────── *PATRON-MD* ────────🟢\n' +
+                '🟣───────── *Zed-Bot* ────────🟢\n' +
                 '📌 *Success!* Reaction sent\n' +
                 '📌 *Channel:* ' + channelInfo.name +
                 '\n📌 *Reaction:* ' + stylizedText +

@@ -46,7 +46,7 @@ module.exports = [
                         'isForwarded': true,
                         'forwardedNewsletterMessageInfo': {
                             'newsletterJid': '120363303045895814@newsletter',
-                            'newsletterName': 'PATRON-MD',
+                            'newsletterName': 'Zed-Bot',
                             'serverMessageId': 143
                         }
                     }

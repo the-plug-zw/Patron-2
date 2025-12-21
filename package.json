@@ -1,10 +1,10 @@
 {
-  "name": "Patron-Md",
+  "name": "Zed-Bot",
   "version": "3.1.0",
   "description": "Next generation Whatsapp bot",
   "main": "main.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name PATRON-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name Zed-Bot"
   },
   "author": "PATRON",
   "engines": {

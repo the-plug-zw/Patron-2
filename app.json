@@ -53,12 +53,12 @@
     },
     "OWNER_NUMBER": {
       "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + \",\").",
-      "value": "2348133729715",
+      "value": "263781564004",
       "required": false
     },
     "SUDO": {
       "description": "The phone numbers of the users who you want to be sub admin for the bot for multiple number , as split (should be in international format without + \",\").",
-      "value": "2348025532222",
+      "value": "27694176088",
       "required": false
     },
     "PACK_NAME": {

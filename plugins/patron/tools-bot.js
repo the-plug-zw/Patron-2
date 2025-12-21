@@ -196,7 +196,7 @@ module.exports = [
                 weatherText += `💧 *Humidity:* ${weatherData.main.humidity}%\n`;
                 weatherText += `🌀 *Wind Speed:* ${weatherData.wind.speed} m/s\n`;
                 weatherText += `⏲️ *Pressure:* ${weatherData.main.pressure} hPa\n\n`;
-                weatherText += `> *© Powered By ᴘᴀᴛʀᴏɴTᴇᴄʜＸ*`;
+                weatherText += `> *© Powered By 🎩-Hxcker-263-🎩*`;
                 
                 await client.sendMessage(message.chat, {
                     'text': weatherText

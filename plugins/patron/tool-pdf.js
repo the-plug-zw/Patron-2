@@ -26,7 +26,7 @@ module.exports = [
                         'document': pdfBuffer,
                         'mimetype': 'application/pdf',
                         'fileName': 'PatronTech.pdf',
-                        'caption': '*📄 PDF created successfully!*\n\n> © Created By ᴘᴀᴛʀᴏɴTᴇᴄʜＸ 🚹'
+                        'caption': '*📄 PDF created successfully!*\n\n> © Created By 🎩-Hxcker-263-🎩'
                     }, {
                         'quoted': message
                     });
