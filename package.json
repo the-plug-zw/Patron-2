@@ -4,7 +4,10 @@
   "description": "Next generation Whatsapp bot",
   "main": "main.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name Zed-Bot"
+    "start": "pm2 start index.js --deep-monitoring --attach --name Zed-Bot",
+    "get-session": "node get-session.js",
+    "publish-session": "node publish-session.js",
+    "publish-session:apply": "node publish-session.js --yes"
   },
   "author": "PATRON",
   "engines": {

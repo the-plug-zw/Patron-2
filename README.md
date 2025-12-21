@@ -56,6 +56,30 @@
   <img src='https://img.shields.io/badge/FORK_REPOSITORY-008000?style=for-the-badge&logo=github&logoColor=white&labelColor=000000'/>
 </a>
 
+### 🔐 Generating & Publishing a session (optional)
+
+You can generate a local WhatsApp session (recommended) and optionally publish it as a private gist for remote deployment.
+
+- Local (recommended):
+  1. Install deps: `npm install`
+  2. Run: `npm run get-session` and scan the QR when it appears.
+  3. After authentication, creds are saved to `./tmp/session/creds.json`.
+  4. To export a copy suitable for gist upload: `node get-session.js --save-session-json` (writes `./tmp/session/session.json`).
+
+- Publish to a private gist (optional):
+  - Using the GitHub CLI (recommended):
+    1. `gh auth login` (one-time)
+    2. `npm run publish-session` (creates a private gist from `./tmp/session/session.json`)
+  - Or using a token:
+    1. `export GITHUB_TOKEN="ghp_xxx"`
+    2. `node publish-session.js` (creates the gist via the GitHub API)
+
+After publishing the script prints the `SESSION_ID` to use, e.g.: `SESSION_ID=Zed-Bot~<gistId>` — add that to your `.env` or export it in your shell before starting the bot.
+
+Automated write: you can run `npm run publish-session:apply` which creates the gist and **automatically writes** `SESSION_ID=Zed-Bot~<gistId>` into a local `.env` file (or the file you pass with `--env`) — the script makes a backup of the file as `.env.bak.<timestamp>` before modifying it.
+
+> ⚠️ Security: Keep the session file private. Avoid publishing it publicly unless you understand the risks.
+
 ---
 
 ### 🔗 Pairing Links
