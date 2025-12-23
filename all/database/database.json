@@ -1,0 +1,25 @@
+{
+  "reconnect": 0,
+  "loadedPlugins": true,
+  "groups": {
+    "120363421231495768@g.us": {
+      "welcome": true
+    }
+  },
+  "settings": {
+    "autoreact": "cmd",
+    "aliveTemplate": "Yes i'm alive"
+  },
+  "database": {},
+  "sticker": {},
+  "warns": {},
+  "setsudo": [],
+  "disabled": [],
+  "ban": [],
+  "gcban": [],
+  "plugins": {},
+  "users": {},
+  "warn": {
+    "263784116208@s.whatsapp.net": 2
+  }
+}
